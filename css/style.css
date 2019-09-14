@@ -1,0 +1,4498 @@
+/*
+ * Globals
+ */
+/*RODAPE CORRECOES*/
+.contatoTelefone{
+    font-size: xx-large;
+    right: 8em;
+    position: relative;
+}
+.contatoLocalizacaoImg{
+    position: relative;
+    bottom: 6em;
+    right: 3.5em;
+}
+.contatoLocalizacaoTexto{
+     font-size: large;
+    position: relative;
+    bottom: 8em;
+    left: 52%;
+    width: 31%;
+
+}
+.navBefore{
+    z-index: 999;
+}
+.divContato{
+    z-index: 999;
+}
+@media (max-width: 1600px) {
+    .contatoLocalizacaoTexto{
+        left: 54%;
+    }
+}
+@media (max-width: 1207px) {
+    .contatoLocalizacaoTexto{
+        left: 58%;
+    }
+}
+@media (max-width: 1030px) {
+    .contatoLocalizacaoImg{
+        left: 4%;
+    }
+    .contatoLocalizacaoTexto{
+         left: 35em;
+        width: 31%;
+
+    }
+}
+@media screen and (max-width: 896px){
+    .contatoTelefone{
+        right: 7em;
+    }
+    .contatoLocalizacaoImg{
+        left: -10%;
+    }
+    .contatoLocalizacaoTexto{
+        left: 24em;
+        width: 42%;
+    }
+}
+@media screen and (max-width: 767px){
+    .contatoTelefone{
+        right: 5em;
+    }
+    .contatoLocalizacaoImg{
+        left: 1%;
+    }
+    .contatoLocalizacaoTexto{
+        left: 23em;
+        width: 37%;
+        font-size: initial;
+
+    }
+}
+@media screen and (max-width: 540px){
+    .contatoTelefone{
+        font-size: medium;
+        right: 13em;
+    }
+    .contatoLocalizacaoImg{
+        left: -3em;
+        top: -5em;
+    }
+    .contatoLocalizacaoTexto{
+        font-size: x-small;
+        left: 3em;
+        top: -2em;
+    }
+    
+}
+@media screen and (max-width: 484px){
+    .contatoTelefone{
+        right: 8em;
+    }
+    .contatoLocalizacaoImg{
+        left: -4em;
+    }
+    .contatoLocalizacaoTexto{
+        left: 8em;
+        top: -4em;
+    }
+}
+@media screen and (max-width: 464px){
+    .contatoTelefone{
+            
+    }
+    .contatoLocalizacaoImg{
+        top: -1em;
+        left: -10em;
+    }
+    .contatoLocalizacaoTexto{
+    }
+}
+@media screen and (max-width: 400px){
+    .contatoTelefone{
+        right: 6em; 
+    }
+    .contatoLocalizacaoImg{
+    }
+    .contatoLocalizacaoTexto{
+        left: 1em;
+        top: -4em;
+        width: 62%;
+    }
+}
+/**/
+
+/* Links */
+a,
+a:focus,
+a:hover {
+    color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+    color: #333;
+    text-shadow: none; /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+    height: 100%;
+    background-color: rgb(220,197,30);
+    font-family: 'OpenSans-Bold', sans-serif;
+}
+
+body {
+    color: #fff;
+    text-align: center;
+    /*text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
+}
+
+
+
+.toolbarItem{
+    font: 10px "OpenSans-Bold", sans-serif !impotant;
+}
+
+
+
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+    padding: 30px;
+}
+
+/*Selo rodaPe*/
+.imgSeloRodaPe {
+    position: relative;
+    bottom: 28em;
+    right: 24%;
+    height: 14em;
+    opacity: 0.8;
+}
+@media (max-width: 1200px) {
+    .imgSeloRodaPe {
+        position: relative;
+        right: 40%;
+        height: 10em;
+    }
+}
+@media (max-width: 690px) {
+    .imgSeloRodaPe {
+        display: none;
+    }
+}
+/**/
+
+/*
+ * Header
+ */
+.masthead-brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+    display: inline-block;
+}
+.masthead-nav > li + li {
+    margin-left: 13px;
+}
+.masthead-nav > li > a {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* IE8 proofing */
+    border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+    background-color: transparent;
+    border-bottom-color: #a9a9a9;
+    border-bottom-color: #fff;
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+    color: #fff;
+    padding-bottom: 1px;
+    border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .masthead-brand {
+        float: left;
+    }
+    .masthead-nav {
+        float: right;
+        position: relative;
+        top: 3em;
+    }
+    #mobilecarousel{
+        display: none;
+    }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+    padding: 0 20px;
+}
+.cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+/*   style bootstrap slide horizontal */
+.containerHorizontalSlide {
+    /*width: 827px;
+    position: relative;
+    top: 47px;*/
+}
+.carousel-control{width: 8% !important;}
+.carousel-control.left, .carousel-control.right {
+	background-image:none;
+}
+.carousel-inner{height: 130px; margin-top: 20px;}
+.carousel-inner .item a{ display: inline-block; width: 200px; padding: 0 10px;}
+
+.img-responsive{
+	width:100%;
+	height:auto;
+}
+.consorcio{
+    width: 53%;
+    position: relative;
+    left: 2em;
+}
+.refinanciamento{
+    width: 85%;
+    position: relative;
+    left: 0em;
+}
+.reVeiculo{
+    width: 85%;
+    position: relative;
+    top: 0em;
+}
+.publico{
+    width: 79%;
+    position: relative;
+    top: 0em;
+}
+@media (min-width: 992px ) {
+	.carousel-inner .active.left {
+		left: -25%;
+	}
+	.carousel-inner .next {
+		left:  25%;
+	}
+	.carousel-inner .prev {
+		left: -25%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px ) {
+	.carousel-inner .active.left {
+		left: -33.3%;
+	}
+	.carousel-inner .next {
+		left:  33.3%;
+	}
+	.carousel-inner .prev {
+		left: -33.3%;
+	}
+	.active > div:first-child {
+		display:block;
+	}
+	.active > div:first-child + div {
+		display:block;
+	}
+	.active > div:last-child {
+		display:none;
+	}
+}
+@media (max-width: 767px) {
+        #mobilecarousel{
+            display: block !important;
+        }
+        #fruitscarousel{
+            display: none !important;
+        }
+	.carousel-inner .active.left {
+		left: -100%;
+	}
+	.carousel-inner .next {
+		left:  100%;
+	}
+	.carousel-inner .prev {
+		left: -100%;
+	}
+	.active > div {
+		display:none;
+	}
+	.active > div:first-child {
+		display:block;
+	}
+        .containerHorizontalSlide {
+            width: 321px;
+            position: relative;
+            top: 47px;
+            left: 4em;
+        }
+}
+@media (max-width: 580px){
+.containerHorizontalSlide {
+    width: 264px;
+    position: relative;
+    top: 47px;
+    left: 2em;
+}
+}
+@media (max-width: 420px){
+.containerHorizontalSlide {
+    width: 188px;
+    position: relative;
+    top: 27px;
+    left: 1em;
+}
+}
+
+/*     */
+/*
+ * Footer
+ */
+
+.mastfoot {
+    color: #999; /* IE8 proofing */
+    color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+    /* Pull out the header and footer */
+    .masthead {
+        position: fixed;
+        top: 0;
+    }
+    .mastfoot {
+        position: fixed;
+        bottom: 0;
+    }
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+    /* Handle the widths */
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+}
+
+@media (min-width: 992px) {
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width: 700px;
+    }
+}
+
+
+/*Index.html*/
+    /*menufixo*/
+    .menufixo{
+        position: fixed;
+        z-index: 998;
+        top: calc(50% - 180px);
+        left: -15px;
+    }
+    /**/
+    /*NavBar*/
+    #navBarOriginal{
+         background: transparent;
+         border-color: transparent;
+         bottom: 15em;
+    }
+    .navBar{
+        height: 10.5em;
+        width: 100%;
+        background: white;    
+    }
+    .navBarVerde{
+    }
+    .imgNavBar{
+        width: 76%;
+        height: 12em;
+        position: relative;
+        bottom: 2em;
+        left: 12%;
+    }
+    .logo{
+        height: 9em;
+        position: relative;
+        top: 2em;
+        left: 14em;
+        z-index: 1000;
+    }
+    .iconeNav{
+        
+    }
+    #myNavbar{
+        top: 2em;
+        position: relative;
+    }
+    
+
+    /**/
+    .divIndexPrincipal{
+        height: 58em;
+        position: relative;
+        bottom: 3.33em;
+        background-image: url(../img/imagensIndex/banner/banner1.jpg);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .divContato{
+        background: white;
+        position: relative;
+        bottom: 2em;
+        text-shadow: 0 0px 0px rgba(0,0,0,.5);
+    }
+    .divContatoMenor{
+        text-align: center;
+    }
+    .box-container{
+        display: inline-block;
+        vertical-align: top;
+        height: 28px;
+        margin-top: 2px;
+        padding: 0 10px 0 0;
+        margin: 0.1em 0em 0.1em 0em;
+    }/*
+    .textoContato1{
+        float: right;
+        color: black;
+        position: relative;
+        right: 38%;
+        top: -11px;
+    }
+    .textoContato2{
+        float: right;
+        color: black;
+        position: relative;
+        right: 35%;
+        top: -11px;
+    }*/
+    .textoContato3{
+        color: black;
+        display: inline;
+        margin:  0 0 0 10px;
+        padding: 0;
+        font-size: 14pt;
+        font-weight: 700;
+    }/*
+    .imgContato1{
+        position: relative;
+        right: 6%;
+        top: 2px;
+        height: 1.5em;
+    }
+    .imgContato2{
+        position: relative;
+        left: 3.5%;
+        top: 2px;
+        height: 1.5em;
+    }*/
+    .imgContato3{
+        max-height: 25px;
+        width: auto;
+    }
+    .tituloIndex{
+            text-transform: uppercase;
+            width: 60%;
+            position: relative;
+            left: 26%;
+            font-weight: 900;
+            top: 0.5em;
+            max-width: 800px;
+            opacity: 0.8;
+            text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .imgIndexPrincipal{
+            margin: -11em 0em 1em 0em;
+            width: 138em;
+    }
+    .divInicioPrimeiro{
+        box-shadow: 5px 5px 5px #888888;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        width: 10em;
+        opacity: 0.8;
+        background: rgb(48,120,82);
+        position: relative;
+        left: 20%;
+        bottom: 0em;
+        height: 6em;
+        transition: all 0.2s;
+    }
+    .divInicio1{
+        box-shadow: 5px 5px 5px #888888;
+        height: 6em;
+        width: 10em;
+        opacity: 0.8;
+        background: rgb(48,120,82);
+        position: relative;
+        left: 20%;
+        top: 0.5em;
+        transition: all 0.2s;
+    }
+    .divInicio2{
+        box-shadow: 5px 5px 5px #888888;
+        height: 6em;
+        width: 10em;
+        opacity: 0.8;
+        background: rgb(48,120,82);
+        position: relative;
+        left: 20%;
+        top: 1em;
+        transition: all 0.2s;
+    }
+    .divInicio3{
+        box-shadow: 5px 5px 5px #888888;
+        height: 6em;
+        width: 10em;
+        opacity: 0.8;
+        background: rgb(48,120,82);
+        position: relative;
+        left: 20%;
+        top: 1.5em;
+        transition: all 0.2s;
+    }
+    .divInicio4{
+        box-shadow: 5px 5px 5px #888888;
+        height: 6em;
+        width: 10em;
+        opacity: 0.8;
+        background: rgb(48,120,82);
+        position: relative;
+        left: 20%;
+        top: 2em;
+        transition: all 0.2s;
+    }
+    .divInicioUltimo{
+        box-shadow: 5px 5px 5px #888888;
+        border-bottom-left-radius:0.5em;
+        border-bottom-right-radius: 0.5em;
+        height: 6em;
+        width: 10em;
+        opacity: 0.8;
+        background: rgb(48,120,82);
+        position: relative;
+        left: 20%;
+        top: 2.5em;
+        transition: all 0.2s;
+    }
+    .passMouse:hover{
+        opacity: 1;
+    }
+    .textoInicio1{
+        font-size: large;
+        position: relative;
+        top: 1.5em;
+    }
+    
+    .textoInicio2{
+        font-size: large;
+        position: relative;
+        top: 1em;
+    }
+    .divInicioHorizontal{
+        box-shadow: 5px 5px 5px #888888;
+        background: rgb(48,120,82);
+        height: 6.5em;
+        width: 29em;
+        opacity: 0.8;
+        font-size: x-large;
+        position: relative;
+        top: 8.5em;
+        left: 31%;
+    }
+    .imgSelo{
+        position: relative;
+        bottom: 58em;
+        right: 23%;
+        height: 18em;
+        opacity: 0.8;
+    }
+    .imgDivHorizontal1{
+        height: 5em;
+        position: relative;
+        top: 2em;
+        right: 4%;
+    }
+    .imgDivHorizontal2{
+        height: 5em;
+        position: relative;
+        top: 2.2em;
+    }
+    .imgDivHorizontal3{
+        height: 5em;
+        position: relative;
+        top: 2.2em;
+        left: 4%;
+    }
+    .buttonSaibaMaisPrimeiro{
+        text-transform: uppercase;
+        border-radius: 0.3em;
+        position: relative;
+        background: rgb(251,255,19);
+        color: rgb(48,120,82);
+        font-size: large;
+        left: 1em;
+        display: inline-block;
+        padding: 1px 30px;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .buttonSaibaMaisPrimeiro:hover{
+        opacity: 1;
+    }
+    .textoDivBrancoOral{
+        font-size: initial;
+        color: rgb(48,120,82);
+    }
+    .divBrancoDireito{
+        position: relative;
+        top: 2em;
+    }
+    .divBranco{
+        background: white;
+        border-radius: 1em;
+        position: relative;
+        top: 20em;
+        /* left: 2em; */
+        height: 7em;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+
+
+    
+    .divSegundoIndexPrincipal{
+        position: relative;
+    }
+    .tituloIndex2{
+        text-transform: uppercase;
+        width: 100%;
+        position: relative;
+        font-weight: 900;
+        bottom: 4em;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndex1, .bolaIndex2, .bolaIndex3, .bolaIndex4{
+        border-bottom-left-radius: 25em;
+        border-bottom-right-radius: 25em;
+        border-top-left-radius: 25em;
+        border-top-right-radius: 25em;
+        border-bottom: 1px solid transparent;
+        background: rgb(48,120,82);
+        height: 12em;
+        width: 12em;
+        position: relative;
+        bottom: 30%;
+        left: 7.5%;
+    }
+
+   .textoBola1, .textoBola2, .textoBola3, .textoBola4{
+        position: relative;
+    }
+/*    .textoBola2{
+        position: relative;
+    }
+    .textoBola3{
+        position: relative;
+    }
+    .textoBola4{
+        position: relative;
+    }
+*/
+    .tituloBolas{
+       text-transform: uppercase;
+       color: black;
+       font-weight: 700;
+        font-size: 27px;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .textoBolas{
+        color: black;
+        width: 100%;
+        position: relative;
+
+    }
+    .iconeEscolherEasy{
+        position: relative;
+        top: 3em;
+    }
+    #iconeEscolherDiferenciado{
+        top: 4.5em;
+    }
+    
+
+    
+    
+    .divCorrecaoTerceiroIndex{
+        height: 5em;
+    }
+    .divTerceiroIndexPrincipal{
+        height: 57em;
+        position: relative;
+        background-image: url(../img/imagensIndex/sonho/banner2.jpg);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: 0em 0em -2em 0em;
+    }
+    .espacoSonho{
+        position: relative;
+        top: 5em;
+    }
+    .espacoSonho .col-lg-4 {
+        height: 170px;
+        margin: 30px 0;
+    }
+    
+    .divTerceiroMenor{
+        position: relative;
+    }
+    .buttonSonho{
+        text-transform: uppercase;
+        border-radius: 0.3em;
+        /* position: relative; */
+        background: rgb(251,255,19);
+        color: rgb(48,120,82);
+        /* width: 15em; */
+        /* height: 2em; */
+        font-size: 16pt;
+        /* left: 37%; */
+        /* bottom: -19em; */
+        font-weight: 900;
+        margin: 0 auto;
+        display: inline-block;
+        padding: 7px 20px;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .buttonSonho:hover{
+        opacity: 1;
+    }
+    .tituloTerceiroIndex{
+        top: 0.5em;
+        text-transform: uppercase;
+        position: relative;
+        font-weight: 900;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .iconeSonho1{
+        width: 15em;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .iconeSonho2{
+        width: 7em;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .iconeSonho3{
+        width: 12em;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .iconeSonho4{
+        width: 16em;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .iconeSonho5{
+        width: 15em;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .iconeSonho6{
+       width: 15em;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .divIconeSonho3{
+        display: none;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .divIconeSonho4{
+        display: none;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .divIconeSonho5{
+        display: none;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .iconeSonho1:hover{
+        opacity: 1;
+    }
+    .iconeSonho2:hover{
+        opacity: 1;
+    }
+    .iconeSonho3:hover{
+        opacity: 1;
+    }
+    .iconeSonho4:hover{
+        opacity: 1;
+    }
+    .iconeSonho5:hover{
+        opacity: 1;
+    }
+    .iconeSonho6:hover{
+        opacity: 1;
+    }
+    
+    
+    
+    
+    
+    .divQuartoIndexPrincipal{
+        background: white;
+        height: 50em;
+        position: relative;
+        margin: 0em 0em -2em 0em;
+    }
+    .tituloParceiros{
+        color: rgb(48,120,82);
+        text-transform: uppercase;
+        width: 100%;
+        position: relative;
+        font-weight: 900;
+        position: relative;
+        top: 2em;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .imgParceirosEasy1{
+        position: relative;
+        top: 15em;
+        right: 10%;
+    }
+    .imgParceirosEasy2{
+        position: relative;
+        top: 15em; 
+    }
+    .imgParceirosEasy3{
+        position: relative;
+        top: 15em;
+        left: 10%;
+    }
+
+    
+    
+    
+    .divQuintoIndexPrincipal{
+        position: relative;
+        height: 20em;
+        background: silver;
+        margin: 0em 0em -2em 0em;
+    }
+    .tituloNossoParceiro{
+        color: rgb(48,120,82);
+        text-transform: uppercase;
+        width: 100%;
+        position: relative;
+        font-weight: 400;
+        position: relative;
+        top: 2em;
+        right: 10%;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .textoNossoParceiro{
+        font-size: x-large;
+        width: 29%;
+        position: relative;
+        left: 25%;
+        top: 4em;
+        
+    }
+    .buttonNossoParceiro1{
+        border-radius: 0.3em;
+        position: relative;
+        background: rgb(251,255,19);/*Amarelo mais claro*/
+        color: rgb(48,120,82);/*Verde*/
+        width: 12em;
+        height: 2em;
+        font-size: xx-large;
+        left: 60%;
+        bottom: 2em;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .buttonNossoParceiro1:hover{
+        opacity: 1;
+    }
+    .buttonNossoParceiro2{
+        text-transform: uppercase;
+        border-radius: 0.3em;
+        position: relative;
+        background: rgb(251,255,19);/*Amarelo mais claro*/
+        color: rgb(48,120,82);/*Verde*/
+        width: 12em;
+        height: 2em;
+        font-size: xx-large;
+        left: 60%;
+        bottom: 1em;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .buttonNossoParceiro2:hover{
+        opacity: 1;
+    }
+    
+    
+    
+    
+    .divSextoIndexPrincipal{
+        background: rgb(48,120,82);
+        height: 13em;
+        position: relative;
+        margin: 0em 0em -2em 0em;
+    }
+    .tituloCadastroEmail{
+        text-transform: uppercase;
+        font-size: x-large;    
+        position: relative;
+        top: 1em;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+        
+    }
+    .emailCadastro{
+        position: relative;
+        top: 4em;
+        right: 20%;
+    }
+    .inputCadastroEmail{
+        border-radius: 10px;
+        color: black;
+        width: 35%;
+        height: 2.5em;
+        position: relative;
+        top: 1.2em;
+    }
+    .buttonCadastroEmail{
+        text-transform: uppercase;
+        border-radius: 0.3em;
+        position: relative;
+        background: rgb(251,255,19);
+        color: rgb(48,120,82);
+        width: 12em;
+        height: 2em;
+        font-size: large;
+        left: 68%;
+        bottom: 1em;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+    .buttonCadastroEmail:hover{
+        opacity: 1;
+    }
+    
+    
+    
+    
+    
+    
+    
+    .divSetimoIndexPrincipal{
+        background: rgb(183,183,183);
+        height: 7em;
+        position: relative;
+        margin: 0em 0em -2em 0em;
+    }
+    .tituloCotacao{
+        text-transform: uppercase;
+        color: black;
+        position: relative;
+        left: 16%;
+        font-size: x-large;
+        width: 15%;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+        top: 1em;
+        opacity: 0.8;
+    }
+    .imgCotacaoEuro{
+        position: relative;
+        bottom: 4.2em;
+    }
+    .imgCotacaoDolar{
+        position: relative;
+        bottom: 4.2em;
+    }
+    .imgCotacaoLibra{
+        position: relative;
+        bottom: 4.2em;
+    }
+    
+    
+    
+    
+    .buttonSimulacao{
+            background: #e0cc20;
+            font-size: x-large;
+            border: none;
+            margin: 4px;
+            border-radius: 6px;
+            opacity: 0.8;
+            transition: all 0.2s;
+    }
+    .buttonSimulacao:hover{
+        opacity: 1;
+    }
+    .divSimulacao1{
+    }
+    
+    .divSimulacao2{
+    }
+    
+    .divSimulacao3{
+    }
+    
+    .divSimulacao4{
+    }
+    .textosimulacao{
+        font-size: x-large;
+        text-align: left;
+    }
+    .textoDesconto{
+        text-align: left;
+        font-size: inherit;
+
+    }
+    .selectSimulacao{
+        width: 100%;
+        height: 2.3em;
+        background: #e0cc20;
+        font-size: large;
+    }
+    .inputSimulacao{
+        width: 100%;
+        background: #e0cc20;
+        height: 1.7em;
+        border-radius: 0.2em;
+        border: none;
+        font-size: x-large;
+        text-align: center;
+    }
+    .simulacao1{
+        display: block;
+    }
+    .simulacao2{
+        display: block;
+        top: 6em;
+        position: relative;
+    }
+    .simulacaoDesaparecer{
+        display: none;
+    }
+    .row1{
+        position: relative;
+        top: 5em;
+        margin: 10px;
+    }
+    .row2{
+        position: relative;
+        top: 10em;
+        margin: 10px;
+        
+    }
+    .row3{
+        position: relative;
+        top: 15em;
+        margin: 10px;
+    }
+    .pSimulacaoContato{
+            font-size: larger;
+            text-align: left;
+    }
+    .inputCadastroSimulacao{
+        width: 100%;
+        border-radius: 0.5em;
+        background: transparent;
+        border-style: solid;
+        border-color: yellow;
+        height: 3em;
+    }
+    .enviarSimulacao{
+        background: yellow;
+        height: 2.5em;
+        color: black;
+    }
+    
+    
+    .divOitavoIndexPrincipal{
+        position: relative;
+        height: 50em;
+        background-image: url(../img/imagensIndex/opcoesEspeciais/banner3.jpg);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        top: 1em;
+        background-size: cover;
+    }
+    .imgOpcoesEspeciais{
+        width: 160em;
+    }
+    .tituloOpcoesEspeciais1{
+        font-size: -webkit-xxx-large;
+        text-transform: uppercase;
+        position: relative;
+        width: 33%;
+        left: 33%;
+        top: 2em;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .tituloOpcoesEspeciais2{
+        text-transform: uppercase;
+        position: relative;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .tituloSimulacao2{
+        font-size: -webkit-xxx-large;
+        text-transform: uppercase;
+        position: relative;
+        top: 1em;
+        width: 33%;
+        left: 33%;
+        opacity: 0.8;
+    }
+    .tituloOpcoesEspeciais2{
+        text-transform: uppercase;
+        position: relative;
+        top: 4em;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .divButonSolicitarProposta{
+        background: #307852;
+        height: 2.5em;
+        border-radius: 0.5em;
+        font-size: large;
+    }
+    
+    
+    
+    
+    .img1{
+            width: 7em;
+    }
+    .img10{
+            width: 7em;
+    }
+    .img100{
+            width: 7em;
+    }
+    .imgOutrosValores{
+            width: 7em;
+    }
+    
+    
+    
+    .tituloEntreContato{
+        color: black;
+        text-transform: uppercase;
+        position: relative;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    
+    
+    
+    
+    .divNonoIndexPrincipal{
+        background-image: url(../img/imagensIndex/contato/bannerRodape.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 56em;
+        background-size: cover;
+        
+    }
+    .divContatoConosco{
+        
+    }
+    input[class^=inputContato], textarea[class^=inputContato] {  padding: 15px 7px;   }
+    
+    .inputContatoNome{
+        background: transparent;
+        border-color: white;
+        border-style: double;
+        border-radius: 0.5em;
+        color: white;
+        position: relative;
+        width: 30%;
+        left: 30%;
+        height: 2em;
+        top: 5em;
+    }
+    .inputContatoTelefone{
+        background: transparent;
+        border-color: white;
+        border-style: double;
+        border-radius: 0.5em;
+        color: white;
+        position: relative;
+        width: 30%;
+        left: -0.2%;
+        height: 2em;
+        top: 8em;
+    }
+    .inputContatoEmail{
+        background: transparent;
+        border-color: white;
+        border-style: double;
+        border-radius: 0.5em;
+        color: white;
+        position: relative;
+        width: 30%;
+        left: -30.4%;
+        height: 2em;
+        top: 11em;
+    }
+    .inputContatoMensagem{
+        background: transparent;
+        border-color: white;
+        border-style: double;
+        border-radius: 0.5em;
+        color: white;
+        position: relative;
+        width: 30%;
+        left: -0.2%;
+        height: 9em;
+        top: 12em;
+    }
+    .inputContatoNome::-webkit-input-placeholder {
+        color: white;
+    }  
+    .inputContatoTelefone::-webkit-input-placeholder {
+        color: white;
+    } 
+    .inputContatoEmail::-webkit-input-placeholder {
+        color: white;
+    } 
+    .inputContatoMensagem::-webkit-input-placeholder {
+        color: white;
+    } 
+    
+    
+    .divContatoConosco1{
+        position: relative;
+        top: 20em;
+    }
+    .divContatoConosco2{
+        position: relative;
+        top: 24em;
+        width: 94%;
+    }
+    .imgEmail{
+        position: relative;
+        right: 6em;
+    }
+    .imgFacebook{
+        position: relative;
+    }
+    .imgTelefone{
+        position: relative;
+    }
+    .imgLocalizacao{
+        position: relative;
+        left: 9%;
+    }
+    
+    .buttonEnviar{
+        position: relative;
+        background: transparent;
+        border-color: white;
+        border-style: solid;
+        width: 7em;
+        border-radius: 0.7em;
+        left: 60%;
+        top: 13em;
+        
+    }
+    .textoButtonEnviar{
+        position: relative;
+        top: 0.35em;
+    }
+    
+    
+    
+    
+    .divRodape{
+        background: white;
+        height: 15em;
+    }
+    .textoRodape{
+        color: black;
+        font-weight: 100;
+        position: relative;
+        top: 4em;
+    }
+    .imagRodapeOzaca{
+        position: relative;
+        width: 100%;
+        top: 7em;
+    }
+    
+    
+    /*Simulacao segundo*/
+    
+    
+    
+    /*Simulacao terceiro*/
+    
+    .imgSimulacao3{
+        width: 160em;
+        margin: 0em 0em -11em 0em;
+    }
+    .tituloSimulacao3{
+        text-transform: uppercase;
+        position: relative;
+        top: 2em;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .subTituloSimulacao3{
+        text-transform: uppercase;
+        position: relative;
+        bottom: 12em;
+        font-weight: 900;
+    }
+    
+    .divIconeSimulacaoCima{
+        position: relative;
+        top: 7em;
+    }
+    .iconeSimulaocao1{
+        
+    }
+    .iconeSimulaocao2{
+        
+    }
+    .iconeSimulaocao3{
+        
+    }
+    .divIconeSimulacaoBaixo{
+        position: relative;
+        top: 7em;
+    }
+    .iconeSimulaocao4{
+        
+    }
+    .iconeSimulaocao5{
+        position: relative;
+    }
+    .iconeSimulaocao6{
+        position: relative;
+        left: 4px;
+        
+    }
+    .quantidade72{
+        color: rgb(220,197,30);
+        display: none;
+    }
+    .quantidade60{
+        color: rgb(220,197,30);
+        display: none;
+    }
+    .quantidade48{
+        color: rgb(220,197,30);
+        display: none;
+    }
+    .outraQuantidade{
+        color: rgb(220,197,30);
+        display: none;
+    }
+    
+    .quantidade72Aparece{
+        color: rgb(220,197,30);
+        display: block;
+    }
+    .quantidade60Aparece{
+        color: rgb(220,197,30);
+        display: block;
+    }
+    .quantidade48Aparece{
+        color: rgb(220,197,30);
+        display: block;
+    }
+    .outraQuantidadeAparece{
+        color: rgb(220,197,30);
+        display: block;
+    }
+    
+    
+    
+    
+    /*Simulação quarto*/
+    .divSimulacao4{
+        
+    }
+    .tituloSimulacao4{
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: x-large;
+        position: relative;
+        top: 2em;
+        opacity: 0.8;
+        text-shadow: 1px 1px 1px rgba(50,50,50,0.5);
+    }
+    .subTituloSimulacao4{
+        position: relative;
+        width: 16em;
+        font-size: x-large;
+        left: 40%;
+        top: 2em;
+    }
+    .pNome{
+        position: relative;
+        right: 12%;
+        top: 2em;
+    }
+    .inputNome{
+        position: relative;
+        width: 30%;
+        height: 3em;
+        background: transparent;
+        border-color: rgb(220,197,30);
+        border-style: solid;
+        border-radius: 0.5em;
+        color: white;
+        top: 2em;
+
+    }
+    .pCPF{
+        position: relative;
+        right: 13%;
+        top: 2em;
+    }
+    .inputCPF{
+        position: relative;
+        width: 30%;
+        height: 3em;
+        background: transparent;
+        border-color: rgb(220,197,30);
+        border-style: solid;
+        border-radius: 0.5em;
+        color: white;
+        top: 2em;
+    }
+    .pEmail{
+        position: relative;
+        right: 13%;
+        top: 2em;
+    }
+    .inputEmail{
+        position: relative;
+        width: 30%;
+        height: 3em;
+        background: transparent;
+        border-color: rgb(220,197,30);
+        border-style: solid;
+        border-radius: 0.5em;
+        color: white;
+        top: 2em;
+    }
+    .pTelefone{
+        position: relative;
+        right: 13%;
+        top: 2em;
+    }
+    .inputTelefone{
+        position: relative;
+        width: 30%;
+        height: 3em;
+        background: transparent;
+        border-color: rgb(220,197,30);
+        border-style: solid;
+        border-radius: 0.5em;
+        color: white;
+        top: 2em;
+    }
+    .pSeusDados{
+        position: relative;
+        font-size: smaller;
+        width: 41em;
+        left: 35%;
+        text-align: left;
+        top: 3em;
+    }
+    .divButtonContinuar{
+        position: relative;
+        background: yellow;
+        width: 10em;
+        height: 2em;
+        border-radius: 0.5em;
+        left: 57%;
+        margin: 0em 0em -9em 0em;
+        top: 4em;
+    }
+    .pButtonContinuar{
+        color: black;
+        position: relative;
+        top: 0.3em;
+    }
+    
+    
+    
+    
+@media screen and (max-width:1816px){
+/*Index*/
+    .imgContato1 {
+        right: 7%;
+    }
+    
+    
+    .bolasIndex{
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        left: 2%;
+    }
+    .bolaIndexSegunda{
+        right: 36%;
+    }
+    .bolaIndexTerceira{
+        right: -8%;
+    }
+    .bolaIndexQuarta{
+        left: 48%;
+    }
+
+}
+@media screen and (max-width:1730px){
+    /*Index.html*/
+
+    .imgContato1{
+        right: 9%;
+    }
+    .imgContato2{
+        left: 2%;
+    }
+    .imgContato3{
+        left: 18%;
+    }
+     .tituloEntreContato{
+    }
+}
+@media screen and (max-width:1700px){
+    .buttonNossoParceiro1{
+        bottom: 3em;
+    }
+    .buttonNossoParceiro2{
+        bottom: 2em;
+    }
+}
+@media screen and (max-width:1650px){
+    /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: 2%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: 36%;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: -8%;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 48%;
+    }
+}
+@media screen and (max-width:1600px){
+    /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: 0%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: 35%;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: -10%;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 50%;
+    }
+    
+    
+    
+}
+@media screen and (max-width:1585px){
+     /*Index.html*/
+   
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 0%;
+        bottom: 23em;
+    }
+}  
+@media screen and (max-width:1550px){
+}   
+
+
+@media screen and (max-width:1500px){
+   
+}   
+
+
+
+@media screen and (max-width:1480px){
+/*Index.html*/
+
+    .imgContato1{
+        right: 13%;
+    }
+    .imgContato2{
+        left: 0%;
+    }
+    
+    
+    .divSetimoIndexPrincipal{
+        background: rgb(183,183,183);
+        height: 7em;
+        position: relative;
+    }
+    .tituloCotacao{
+        text-transform: uppercase;
+        color: black;
+        position: relative;
+        left: 16%;
+        font-size: x-large;
+        width: 15%;
+        top: 1em;
+    }
+    .imgCotacaoEuro{
+        left: 11%;
+    }
+    .imgCotacaoDolar{
+        left: 11%;
+    }
+    .imgCotacaoLibra{
+        left: 11%
+    }
+}
+
+
+@media screen and (max-width:1480px){
+
+    /*Index.html*/
+        .bolasIndex{
+            top: 10em;
+        }
+        .bolaIndexPrimeira{
+            left: 0%;
+        }
+        .bolaIndexSegunda{
+            right: 28%;
+        }
+        .bolaIndexTerceira{
+            right: -18%;
+        }
+        .bolaIndexQuarta{
+            left: 5%;
+        }
+}
+@media screen and (max-width:1360px){
+
+    /*Index.html*/
+        .bolasIndex{
+            top: 10em;
+        }
+        .bolaIndexPrimeira{
+            left: 0%;
+        }
+        .bolaIndexSegunda{
+            right: 30%;
+        }
+        .bolaIndexTerceira{
+            right: -20%;
+        }
+        .bolaIndexQuarta{
+            left: 2%;
+        }
+}
+@media screen and (max-width:1300px){
+/*Index.html*/
+
+    .imgContato1{
+        right: 15%;
+    }
+    .imgContato2{
+        left: -1%;
+    }
+    .imgContato3{
+        left: 19%;
+    }
+    .tituloIndex {
+        width: 65%;
+    }
+    .divInicioPrimeiro{
+        left: 10%;
+    }
+    .divInicio1{
+        left: 10%;
+    }
+    .divInicio2{
+        left: 10%;
+    }
+    .divInicio3{
+        left: 10%;
+    }
+    .divInicio4{
+        left: 10%;
+    }
+    .divInicioUltimo{
+        left: 10%;
+    }
+    .divInicioHorizontal{
+        left: 26%;
+    }
+    /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: -2%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: 30%;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: -20%;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 5%;
+    }
+}
+@media screen and (max-width:1280px){
+    /*NavBar*/
+    .navBar{
+        height: 11em;
+        width: 100%;
+        background: white;    
+    }
+    .navBarVerde{
+    }
+    .imgNavBar{
+        width: 84%;
+        height: 12em;
+        position: relative;
+        bottom: 2em;
+        left: 8%;
+    }
+    .logo{
+        left: 1em;
+    }
+    .iconeNav{
+        
+    }
+    #myNavbar{
+        top: 2em;
+        position: relative;
+    }
+    
+ }
+@media screen and (max-width:1221px){
+}
+@media screen and (max-width:1200px){
+/*Index.html*/
+    .textoContato1{
+        right: 31%;
+    }
+    .textoContato2{
+        right: 28%;
+    }
+    .textoContato3{
+        right: 25%;
+    }
+    .imgContato1{
+        right: 12%;
+    }
+    .imgContato2{
+        left: 4%;
+    }
+    .imgContato3{
+        left: 26%;
+    }
+    .tituloIndex{
+        width: 65%;
+    }
+    .divInicioPrimeiro{
+        left: 10%;
+    }
+    .divInicio1{
+        left: 10%;
+    }
+    .divInicio2{
+        left: 10%;
+    }
+    .divInicio3{
+        left: 10%;
+    }
+    .divInicio4{
+        left: 10%;
+    }
+    .divInicioUltimo{
+        left: 10%;
+    }
+     /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: -2%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: 25%;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: -27%;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 7%;
+    }
+    .buttonSonho {
+        left: 30%;
+    }
+    
+    
+    
+    
+    
+    .inputContatoNome{
+        width: 60%;
+        left: 0%;
+        top: 9em;
+    }
+    .inputContatoTelefone{
+        width: 60%;
+        left: 0%;
+        top: 10em;
+    }
+    .inputContatoEmail{
+        width: 60%;
+        left: 0%;
+    }
+    .inputContatoMensagem{
+        width: 60%;
+        left: 0%;
+    }
+    .divContatoConosco1 {
+        bottom: 33em;
+    }
+    .divContatoConosco2 {
+        bottom: 28em;
+    }
+    
+    
+    
+    .divRodape{
+        height: 19em;
+    }
+    
+    
+    
+    
+    
+    
+    /*Simulação quarto*/
+    .tituloSimulacao4{
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: x-large;
+        bottom: 25em;
+        position: relative;
+    }
+    .subTituloSimulacao4{
+        left: 32%;
+    }
+    .pNome{
+        right: 21%;
+    }
+    .inputNome{
+        width: 51%;
+
+    }
+    .pCPF{
+        right: 23%;
+    }
+    .inputCPF{
+        width: 51%;
+    }
+    .pEmail{
+        right: 23%;
+    }
+    .inputEmail{
+       width: 51%;
+    }
+    .pTelefone{
+        right: 22%;
+    }
+    .inputTelefone{
+        width: 51%;
+    }
+    .pSeusDados{
+        left: 25%;
+    }
+    
+    
+    
+}
+@media screen and (max-width:1199px){
+    
+    .imgSelo {
+        bottom: 55em;
+        height: 13em;
+    }
+}
+@media screen and (max-width:1196px){
+    /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: -2%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: 25%;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: 5%;
+        bottom: 23em;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 43%;
+    }
+}
+@media screen and (max-width:1178px){
+}
+@media screen and (max-width:1123px){
+    
+    .imgSelo {
+        bottom: 50em;
+        right: 19%;
+        height: 13em;
+    }
+}
+@media screen and (max-width:1133px){
+    
+    .tituloOpcoesEspeciais1{
+        width: 56%;
+        left: 23%;
+    }
+     .tituloSimulacao2{
+        width: 56%;
+        left: 23%;
+    }
+}
+@media screen and (max-width:1100px){
+    /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: -2%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: 19%;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: 0%;
+        bottom: 23em;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 49%;
+    }
+}
+
+
+@media screen and (max-width:1060px){
+/*Index.html*/
+    
+    .textoContato1{
+        right: 27%;
+    }
+    .textoContato2{
+        right: 25%;
+    }
+    .textoContato3{
+        right: 22%;
+    }
+    .imgContato1{
+        right: 10%;
+    }
+    .imgContato2{
+        left: 6%;
+    }
+    .imgContato3{
+        left: 29%;
+    }
+    .tituloIndex {
+        width: 55%;
+    }
+    .divInicioPrimeiro{
+        left: 1%;
+    }
+    .divInicio1{
+        left: 1%;
+    }
+    .divInicio2{
+        left: 1%;
+    }
+    .divInicio3{
+        left: 1%;
+    }
+    .divInicio4{
+        left: 1%;
+    }
+    .divInicioUltimo{
+        left: 1%;
+    }
+    .divInicioHorizontal {
+        left: 18%;
+    }
+    
+    .buttonNossoParceiro1{
+        bottom: 2em;
+    }
+    .buttonNossoParceiro2{
+        bottom: 1em;
+    }
+    .tituloNossoParceiro {
+        right: 20%;
+    }
+    .textoNossoParceiro{
+        width: 52%;
+        left: 4%;
+    }
+    
+    
+}
+ @media screen and (max-width:1030px){
+    .textoContato1{
+        right: 30%;
+    }
+    .textoContato2{
+        right: 26%;
+    }
+    .textoContato3{
+        right: 22%;
+    }
+    .imgContato1{
+        right: 14%;
+    }
+    .imgContato2{
+        left: 3%;
+    }
+    .imgContato3{
+        left: 29%;
+    }
+    .tituloIndex{
+        width: 65%;
+    }
+}
+@media screen and (max-width:996px){
+     /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: 16%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: -18%;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: 25%;
+        bottom: -2em;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 40%;
+        top: 2em;
+    }
+    .divTerceiroIndexPrincipal{
+    }
+    .buttonSonho {
+        left: 25%;
+    }
+    
+     .divQuartoIndexPrincipal{
+    }
+    
+    
+    .divQuintoIndexPrincipal {
+    }
+    .buttonNossoParceiro1{
+        bottom: 2em;
+        width: 11em;
+    }
+    .buttonNossoParceiro2{
+        bottom: 1em;
+        width: 11em;
+    }
+    .tituloNossoParceiro {
+        right: 20%;
+    }
+    .textoNossoParceiro{
+        width: 52%;
+        left: 4%;
+    }
+    
+    
+    
+    .divSextoIndexPrincipal{
+    }
+    .inputCadastroEmail{
+        width: 57%;
+        right: 8em;
+    }
+    .emailCadastro{
+        right: 45%;
+    }
+    
+    
+    
+    
+    .divSetimoIndexPrincipal{
+    }
+    .tituloCotacao{
+        left: 5%;
+    }
+    
+    
+    
+    
+    
+     .divOitavoIndexPrincipal{
+        position: relative;
+    }
+    
+    
+    
+    .divNonoIndexPrincipal{
+    }
+    
+    
+}
+@media screen and (max-width:991px){
+    .divOitavoIndexPrincipal {
+        height: 80em;
+    }
+    .divButonSolicitarProposta {
+        height: 3.5em;
+    }
+}
+@media screen and (max-width:979px){
+    /*Index.html*/
+    .divSegundoIndexPrincipal{
+    }
+    .textoContato1{
+        right: 28%;
+    }
+    .textoContato2{
+        right: 24%;
+    }
+    .textoContato3{
+        right: 20%;
+    }
+    .imgContato1{
+        right: 13%;
+    }
+    .imgContato2{
+        left: 4%;
+    }
+    .imgContato3{
+        left: 31%;
+    }
+    .tituloIndex {
+        width: 60%;
+    }
+    .divInicioPrimeiro{
+        left: 1%;
+    }
+    .divInicio1{
+        left: 1%;
+    }
+    .divInicio2{
+        left: 1%;
+    }
+    .divInicio3{
+        left: 1%;
+    }
+    .divInicio4{
+        left: 1%;
+    }
+    .divInicioUltimo{
+        left: 1%;
+    }
+    .divInicioHorizontal {
+        left: 17%;
+        width: 30em;
+    }
+    
+
+}
+@media screen and (max-width:968px){
+    
+}
+@media screen and (max-width:923px){
+    
+}
+@media screen and (max-width:896px){
+/*Index.html*/
+    .menufixo{
+        display: none;
+    }
+    .textoContato1{
+        right: 28%;
+    }
+    .textoContato2{
+        right: 24%;
+    }
+    .textoContato3{
+        right: 19%;
+    }
+    .imgContato1{
+        right: 17%;
+    }
+    .imgContato2{
+        left: 2%;
+    }
+    .imgContato3{
+        left: 32%;
+    }
+    .tituloIndex {
+        width: 72%;
+        left: 15%;
+    }
+    .divInicioPrimeiro{
+        left: 1%;
+    }
+    .divInicio1{
+        left: 1%;
+    }
+    .divInicio2{
+        left: 1%;
+    }
+    .divInicio3{
+        left: 1%;
+    }
+    .divInicio4{
+        left: 1%;
+    }
+    .divInicioUltimo{
+        left: 1%;
+    }
+    .divInicioHorizontal {
+        left: 21%;
+        width: 22em;
+    }
+    .divSegundoIndexPrincipal{
+        position: relative;
+        top: 10em;
+        height: 80em;
+    
+    }
+    .imgSelo {
+        bottom: 48em;
+        height: 10em;
+        right: 9%;
+    }
+     .imgDivHorizontal1{
+        height: 4em;
+        position: relative;
+        top: 2em;
+        right: 0%;
+    }
+    .imgDivHorizontal2{
+        height: 4em;
+        position: relative;
+        top: 5.2em;
+    }
+    .imgDivHorizontal3{
+        height: 4em;
+        position: relative;
+        top: 8.2em;
+        left: 1%;
+    }
+    .divSegundoIndexPrincipal{
+        height: 90em;
+        position: relative;
+    }
+    .divTerceiroIndexPrincipal {
+        position: relative;
+        height: 70em;
+    }
+    .divQuartoIndexPrincipal{
+    }
+    
+    
+    .divQuintoIndexPrincipal {
+    }
+    .buttonNossoParceiro1{
+        bottom: 3em;
+        left: 55%;
+    }
+    .buttonNossoParceiro2{
+        bottom: 2em;
+        left: 55%;
+    }
+    .tituloNossoParceiro {
+        right: 24%;
+    }
+    .textoNossoParceiro{
+        width: 52%;
+        left: 0%;
+    }
+    
+    
+    
+    
+    .divSextoIndexPrincipal{
+    }
+    
+    
+    
+    
+    .divSetimoIndexPrincipal{
+    }
+    .tituloCotacao{
+        left: 2%;
+    }
+     
+    
+    
+    
+    .divOitavoIndexPrincipal{
+    }
+    .tituloOpcoesEspeciais1{
+        width: 70%;
+        left: 15%;
+    }
+    .tituloSimulacao2{
+        width: 70%;
+        left: 15%;
+    }
+    
+    
+    .divNonoIndexPrincipal{
+    }
+    .inputContatoNome{
+        bottom: 47em;
+        width: 60%;
+        left: 0%;
+        height: 2em;
+    }
+    .inputContatoTelefone{
+        bottom: 44em;
+        width: 60%;
+        left: 0%;
+        height: 2em;
+    }
+    .inputContatoEmail{
+        bottom: 41em;
+        width: 60%;
+        left: 0%;
+        height: 2em;
+    }
+    .inputContatoMensagem{
+        bottom: 38em;
+        width: 60%;
+        left: 0%;
+        height: 9em;
+    }
+    
+    .divContatoConosco1{
+        bottom: 30em;
+    }
+    .divContatoConosco2{
+        bottom: 25em;
+    }
+    .imgEmail{
+        right: 13%;
+        height: 1.5em;
+    }
+    .imgFacebook{
+        right: 8%;
+    }
+    .imgTelefone{
+        height: 4em;
+        right: 4%;
+    }
+    .imgLocalizacao{
+        left: 9%;
+        height: 4em;
+    }
+    
+    
+    
+    
+    .divRodape{
+        background: white;
+        height: 19em;
+    }
+    .imagRodapeOzaca{
+        position: relative;
+        width: 200%;
+        top: 7em;
+        right: 50%;
+    }
+    
+}
+@media screen and (max-width:880px){
+    /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: 13%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: -25%;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: 20%;
+        bottom: -2em;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 50%;
+        top: 2em;
+    }
+    .iconeSonho1{
+    }
+    .iconeSonho2{
+    }
+    .iconeSonho3{
+    }
+    .iconeSonho4{
+    }
+    .iconeSonho5{
+    }
+    .iconeSonho6{
+    }
+    .divIconeSonho3{
+        display: block;
+    }
+    .divIconeSonho4{
+        display: block;
+        position: relative;
+        top: 2em;
+    }
+    .divIconeSonho5{
+        display: block;
+        position: relative;
+        top: 4em;
+    }
+    .iconeSonhoMenor1{
+        position: relative;
+        right: 9%;
+    }
+    .iconeSonhoMenor2{
+        
+    }
+    .iconeSonhoMenor3{
+        
+    }
+    .iconeSonhoMenor4{
+        position: relative;
+        left: 5%;
+    }
+    .iconeSonhoMenor5{
+        position: relative;
+        right: 1%;
+    }
+    .iconeSonhoMenor6{
+        
+    }
+    
+    
+    
+}
+@media screen and (max-width:873px){
+    .textoDivBrancoOral {
+        font-size: large;
+    }
+}
+@media screen and (max-width:840px){
+    /*Index.html*/
+    .divQuintoIndexPrincipal {
+    }
+    .buttonNossoParceiro1{
+        bottom: 3.7em;
+        left: 0.5%;
+    }
+    .buttonNossoParceiro2{
+        bottom: 5.6em;
+        left: 51%;
+    }
+    .tituloNossoParceiro {
+        right: 0%;
+        top: 2.5em;
+    }
+    .textoNossoParceiro{
+        width: 60%;
+        left: 20%;
+    }
+}
+@media screen and (max-width:827px){
+    /*Index.html*/
+    .buttonNossoParceiro1{
+        bottom: 4.7em;
+        left: 0.5%;
+    }
+    .buttonNossoParceiro2{
+        bottom: 6.7em;
+        left: 51%;
+    }
+}
+@media screen and (max-width:816px){
+    /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: 8%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: -32%;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: 20%;
+        bottom: -2em;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 5%;
+        top: -21em;
+
+    }
+    
+}
+@media screen and (max-width:803px){
+/*Index.html*/
+    
+    .textoContato1{
+        right: 24%;
+    }
+    .textoContato2{
+        right: 20%;
+    }
+    .textoContato3{
+        right: 16%;
+    }
+    .imgContato1{
+        right: 17%;
+    }
+    .imgContato2{
+        left: 4%;
+    }
+    .imgContato3{
+        left: 36%;
+    }
+    .tituloIndex {
+        width: 74%;
+        left: 15%;
+    }
+    
+    .divInicioHorizontal {
+    }
+    
+    
+    
+    .inputCadastroEmail {
+        right: 6em;
+    }
+    
+}
+@media screen and (max-width:783px){
+    /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: 13%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: -25%;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: 20%;
+        bottom: -2em;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 50%;
+        top: 2em;
+    }
+    
+}
+@media screen and (max-width:768px){
+    .divIconeSonho3{
+       width: 50%;
+        left: 24%;
+        position: relative;
+
+    }
+    .divCorrecaoTerceiroIndex{
+        height: 18em;
+    }
+}
+@media screen and (max-width:767px){
+ /*Navbar*/
+    #navBarOriginal{
+        bottom: 2em;
+       }
+    .navBar{
+        height: 16em;
+        width: 100%;
+        background: white;    
+    }
+    .navBarVerde{
+    }
+    .imgNavBar{
+       display: none;
+    }
+    .logo{
+        height: 9em;
+        position: relative;
+        top: 2em;
+        left: 0em;
+    }
+    .iconeNav{
+        height: 3em;
+    }
+    #myNavbar{
+        background: #307852;
+        top: 2em;
+        position: relative;
+    }
+    /*Index.html*/
+    
+    .textoContato1{
+        right: 24%;
+        top: 0.3em;
+    }
+    .textoContato2{
+        right: 20%;
+        top: 0.3em;
+    }
+    .textoContato3{
+        right: 16%;
+        top: 0.3em;
+    }
+    .imgContato1{
+        right: 10%;
+    }
+    .imgContato2{
+        left: 10%;
+    }
+    .imgContato3{
+        left: 44%;
+    }
+    .tituloIndex {
+        width: 74%;
+        left: 15%;
+    }
+    .imgIndexPrincipal {
+        margin: -2.5em 0em 0em 0em;
+    }
+    .imgSegundoIndex{
+        position: relative;
+        bottom: 17.5em;
+    }
+    .divTerceiroMenor {
+    }
+    .imgDivBranco{
+        display: none;
+    }
+    .divBranco{
+        height: 11em;
+    }
+    
+    
+    .divQuintoIndexPrincipal {
+    }
+    .buttonNossoParceiro1{
+        bottom: 7.7em;
+        left: 10.5%;
+        width: 12em;
+        font-size: large;;
+    }
+    .buttonNossoParceiro2{
+        bottom: 9.6em;
+        left: 56%;
+        width: 12em;
+        font-size: large;;
+    }
+    .tituloNossoParceiro {
+        right: 0%;
+        top: 2.5em;
+    }
+    .textoNossoParceiro{
+        width: 60%;
+        left: 20%;
+    }
+    
+    
+    
+    
+    
+    
+    .imgCotacaoEuro{
+        bottom: 3.2em;
+        height: 5em;
+    }
+    .imgCotacaoDolar{
+        bottom: 3.2em;
+        height: 5em;
+    }
+    .imgCotacaoLibra{
+        bottom: 3.2em;
+        height: 5em;
+    }
+    
+    
+    
+    
+     .inputContatoNome{
+        bottom: 47em;
+        width: 60%;
+        left: 0%;
+        height: 2em;
+    }
+    .inputContatoTelefone{
+        bottom: 44em;
+        width: 60%;
+        left: 0%;
+        height: 2em;
+    }
+    .inputContatoEmail{
+        bottom: 41em;
+        width: 60%;
+        left: 0%;
+        height: 2em;
+    }
+    .inputContatoMensagem{
+        bottom: 38em;
+        width: 60%;
+        left: 0%;
+        height: 9em;
+    }
+    
+    .divContatoConosco1{
+        bottom: 32em;
+        left: 4%;
+        width: 96%;
+    }
+    .divContatoConosco2{
+        bottom: 28em;
+        left: -1.5%;
+    }
+    .imgEmail{
+        right: 13%;
+        height: 1.5em;
+    }
+    .imgFacebook{
+        height: 2em;
+    }
+    .imgTelefone{
+        height: 3em;
+        right: 4%;
+    }
+    .imgLocalizacao{
+        height: 3em;
+    }
+    
+    
+    .divRodape{
+        background: white;
+        height: 19em;
+    }
+}
+@media screen and (max-width:768px){
+    /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: 4%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: -35%;
+        bottom: 23em;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: 20%;
+        bottom: 20em;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 5%;
+        top: -43em;
+
+    }
+}
+@media screen and (max-width:767px){
+   .divTerceiroIndexPrincipal {
+        height: 116em;
+    }
+}
+@media screen and (max-width:730px){
+/*Index.html*/
+    
+    .textoContato1{
+        right: 24%;
+    }
+    .textoContato2{
+        right: 20%;
+    }
+    .textoContato3{
+        right: 16%;
+    }
+    .imgContato1{
+        right: 10%;
+    }
+    .imgContato2{
+        left: 11%;
+    }
+    .imgContato3{
+        left: 44%;
+    }
+    .tituloIndex {
+        width: 74%;
+        left: 15%;
+    }
+    .divInicioHorizontal {
+        left: 16%;
+        width: 69%;
+    }
+    
+    
+    
+    
+    .divOitavoIndexPrincipal{
+        position: relative;
+        bottom: -9em;
+    }
+    .imgOpcoesEspeciais{
+        width: 160em;
+    }
+    .tituloOpcoesEspeciais1{
+        font-size: xx-large;
+        bottom: 21em;
+        width: 78%;
+        left: 10%;
+    }
+    
+    .tituloSimulacao2{
+        font-size: xx-large;
+        bottom: 21em;
+        width: 78%;
+        left: 10%;
+    }
+    .tituloOpcoesEspeciais2{
+        text-transform: uppercase;
+        font-size: x-large;
+        position: relative;
+        bottom: 25em;
+    }
+    
+    
+    
+    .img1{
+        bottom: 37em;
+        left: 25%;
+    }
+    .img10{
+        bottom: 37em;
+        left: 25%;
+    }
+    .img100{
+        bottom: 28em;
+        right: 25%;
+        top: 23.5em;
+    }
+    .imgOutrosValores{
+        bottom: 28em;
+        right: 25%;
+    } 
+    
+    
+    /*Simulação quarto*/
+    .subTituloSimulacao4{
+        left: 21%;
+    }
+    .pNome{
+        right: 37%;
+    }
+    .inputNome{
+        width: 92%;
+
+    }
+    .pCPF{
+        right: 42%;
+    }
+    .inputCPF{
+        width: 92%;
+    }
+    .pEmail{
+        right: 41%;
+    }
+    .inputEmail{
+        width: 92%;
+    }
+    .pTelefone{
+        right: 41%;
+    }
+    .inputTelefone{
+        width: 92%;
+    }
+    .pSeusDados{
+        left: 5%;
+    }
+    
+    
+    
+    
+}
+@media screen and (max-width:728px){
+    /*index.html*/
+    .iconeSonho4 {
+        right: -17em;
+        top: 1em;
+    }
+    .iconeSonho5 {
+        right: 21em;
+        top: 11em;
+    }
+    .iconeSonho6 {
+        left: 9em;
+        top: 1em;
+    }
+    .buttonSonho {
+        bottom: -29em;
+        left: 15%;
+    }
+}
+@media screen and (max-width:725px){
+ .divOitavoIndexPrincipal{
+        position: relative;
+        bottom: -9em;
+    }
+    .imgOpcoesEspeciais{
+        width: 160em;
+    }
+    .tituloOpcoesEspeciais1{
+        font-size: xx-large;
+        bottom: 21em;
+        width: 78%;
+        left: 10%;
+    }
+    .tituloOpcoesEspeciais2{
+        text-transform: uppercase;
+        font-size: x-large;
+        position: relative;
+        bottom: 25em;
+    }
+     .tituloSimulacao2{
+        font-size: xx-large;
+        bottom: 21em;
+        width: 78%;
+        left: 10%;
+    }
+    .tituloOpcoesEspeciais2{
+        text-transform: uppercase;
+        font-size: x-large;
+        position: relative;
+        bottom: 25em;
+    }
+    
+    
+    .img1{
+        bottom: 37em;
+        left: 5%;
+    }
+    .img10{
+        bottom: 37em;
+        left: 15%;
+    }
+    .img100{
+        bottom: 28em;
+        right: 47%;
+    }
+    .imgOutrosValores{
+        bottom: 34.6em;
+        right: -15%;
+    } 
+}
+@media screen and (max-width:700px){
+    /*Index.html*/
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: -2%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: -44%;
+        bottom: 23em;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: 16%;
+        bottom: 20em;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 12%;
+        top: -43em;
+
+    }
+    
+    
+    
+    
+    .buttonCadastroEmail {
+        left: 67%;
+    }
+}
+@media screen and (max-width:690px){
+   }
+@media screen and (max-width:660px){
+/*Index.html*/
+    
+    .textoContato1{
+        right: 20%;
+    }
+    .textoContato2{
+        right: 15%;
+    }
+    .textoContato3{
+        right: 10%;
+    }
+    .imgContato1{
+        right: 11%;
+    }
+    .imgContato2{
+        left: 13%;
+    }
+    .imgContato3{
+        left: 51%;
+    }
+    .tituloIndex {
+        width: 89%;
+        left: 5%;
+    }
+    .divInicioHorizontal {
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: 10%;
+        bottom: 20em;
+    }
+    
+    
+    
+    .img100{
+        bottom: 28em;
+        right: 50%;
+    }
+    
+}
+
+@media screen and (max-width:654px){
+    .imgSegundoIndex{
+            position: relative;
+            bottom: 20.5em;
+        }
+        .divQuartoIndexPrincipal{
+        }
+        
+        
+        .inputCadastroEmail {
+            width: 42%;
+        }
+        .buttonCadastroEmail {
+            left: 55%;
+        }
+        
+        
+        
+       
+        
+        .divSetimoIndexPrincipal{
+            height: 10em;
+        }
+        .tituloCotacao{
+            width: 100%;
+            top: 0.2em;
+        }
+        .imgCotacaoEuro{
+            position: relative;
+            bottom: -0.8em;
+            left: 0%;
+        }
+        .imgCotacaoDolar{
+            position: relative;
+            bottom: -0.8em;
+            left: 0%;
+        }
+        .imgCotacaoLibra{
+            position: relative;
+            bottom: -0.8em;
+            left: 0%;
+        }
+        
+        
+        
+      .divCorrecaoTerceiroIndex {
+        height: 19em;
+    }
+
+        
+}
+@media screen and (max-width:650px){
+
+/*Simulacao terceiro*/
+    
+    .imgSimulacao3{
+        margin: 0em 0em -6em 0em;
+    }
+    .tituloSimulacao3{
+        bottom: 16em;
+    }
+    .subTituloSimulacao3{
+        bottom: 15em;
+    }
+    
+    .divIconeSimulacaoCima{
+        bottom: 35em;
+    }
+    .divIconeSimulacaoBaixo{
+        bottom: 34em;
+    }
+} 
+
+@media screen and (max-width:603px){
+    .divIconeSonho3{
+        width: 102%;
+        left: 0%;
+    }
+    .divIconeSonho4{
+        top: 4em;
+        position: relative;
+    }
+    .divIconeSonho5{
+        position: relative;
+        top: 10em;
+    }
+}
+
+@media screen and (max-width:600px){
+/*Index.html*/
+    
+    .textoContato1{
+        right: 13%;
+    }
+    .textoContato2{
+        right: 5%;
+    }
+    .textoContato3{
+        right: 1%;
+    }
+    .imgContato1{
+        right: 9%;
+    }
+    .imgContato2{
+        left: 20%;
+    }
+    .imgContato3{
+        left: 62%;
+    }
+    .tituloIndex {
+        width: 100%;
+        left: -1%;
+    }
+    .divInicioHorizontal {
+    }
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .bolaIndexPrimeira{
+        float: left;
+        position: relative;
+        left: -5%;
+    }
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: -53%;
+        bottom: 23em;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: 2%;
+        bottom: 20em;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 19%;
+        top: -43em;
+
+    }
+    .imgSelo {
+        display: none;
+    }
+    
+    .img100{
+        bottom: 28em;
+        top: 23.5em;
+        right: 58%;
+    } 
+}
+@media screen and (max-width:570px){
+     /*index.html*/
+    .buttonSonho {
+        left: 1%;
+        bottom: -29em;
+        width: 14em;
+    }
+}
+
+@media screen and (max-width:546px){
+.divOitavoIndexPrincipal{
+        position: relative;
+        bottom: -9em;
+    }
+    .imgOpcoesEspeciais{
+        width: 160em;
+    }
+    .tituloOpcoesEspeciais1{
+        font-size: xx-large;
+        bottom: 21em;
+        width: 78%;
+        left: 10%;
+    }
+    .tituloOpcoesEspeciais2{
+        text-transform: uppercase;
+        font-size: x-large;
+        position: relative;
+        bottom: 25em;
+    }
+    .tituloSimulacao2{
+        font-size: xx-large;
+        bottom: 21em;
+        width: 78%;
+        left: 10%;
+    }
+    .tituloOpcoesEspeciais2{
+        text-transform: uppercase;
+        font-size: x-large;
+        position: relative;
+        bottom: 25em;
+    }
+    
+    
+    
+    .img1{
+        bottom: 37em;
+        left: -5%;
+    }
+    .img10{
+        bottom: 37em;
+        left: 0%;
+    }
+    .img100{
+        bottom: 34.5em;
+        right: 5%;
+        top: 17em;
+    }
+    .imgOutrosValores{
+        bottom: 34.6em;
+        right: 0%;
+    } 
+    
+    
+    
+    
+    
+    /*Simulacao terceiro*/
+    
+    .imgSimulacao3{
+        width: 160em;
+        margin: 0em 0em -6em 0em;
+    }
+    .tituloSimulacao3{
+        text-transform: uppercase;
+        position: relative;
+        bottom: 16em;
+    }
+    .subTituloSimulacao3{
+        text-transform: uppercase;
+        position: relative;
+        bottom: 15em;
+        font-weight: 900;
+    }
+    
+    .divIconeSimulacaoCima{
+        position: relative;
+        bottom: 35em;
+    }
+    .iconeSimulaocao1{
+        width: 32%;
+    }
+    .iconeSimulaocao2{
+        width: 32%;
+    }
+    .iconeSimulaocao3{
+        width: 32%;
+    }
+    .divIconeSimulacaoBaixo{
+        position: relative;
+        bottom: 34em;
+    }
+    .iconeSimulaocao4{
+        width: 32%;
+    }
+    .iconeSimulaocao5{
+        width: 32%;
+    }
+    .iconeSimulaocao6{
+        width: 32%;
+    }
+    
+}
+@media screen and (max-width:540px){
+/*Index.html*/
+    
+    .textoContato1{
+        right: 10%;
+    }
+    .textoContato2{
+        right: 5%;
+    }
+    .textoContato3{
+        right: 1%;
+    }
+    .imgContato1{
+        right: 9%;
+    }
+    .imgContato2{
+        left: 19%;
+    }
+    .imgContato3{
+        left: 63%;
+    }
+    .tituloIndex {
+        width: 100%;
+        left: -1%;
+    }
+    .divInicioPrimeiro{
+        left: 1%;
+    }
+    .divInicio1{
+        left: 1%;
+    }
+    .divInicio2{
+        left: 1%;
+    }
+    .divInicio3{
+        left: 1%;
+    }
+    .divInicio4{
+        left: 1%;
+    }
+    .divInicioUltimo{
+        left: 1%;
+    }
+    .divInicioHorizontal {
+        left: 16%;
+        width: 69%;
+    }
+    .divSegundoIndexPrincipal{
+        height: 115em;
+    
+    }
+    .bolasIndex{
+        position: relative;
+        top: 10em;
+    }
+    .divTerceiroIndexPrincipal {
+        height: 122em;
+        position: relative;
+    }
+    #mobilecarousel{
+        display: block;
+    }
+    
+    
+    
+    
+    .divQuartoIndexPrincipal{
+    }
+    .imgParceirosEasy1{
+        top: 15em;
+        right: 4%;
+        height: 10em;
+    }
+    .imgParceirosEasy2{
+        top: 15em; 
+        height: 10em;
+    }
+    .imgParceirosEasy3{
+        top: 15em;
+        left: 4%;
+        height: 10em;
+    }
+    
+    
+    
+    .divQuintoIndexPrincipal {
+        bottom: 0em;
+    }
+    
+    
+    
+    
+    .divSextoIndexPrincipal {
+        }
+    
+        
+        
+        
+        
+    .divSetimoIndexPrincipal{
+    }
+    
+    .divOitavoIndexPrincipal {
+    }
+    
+    
+    
+    
+    .divNonoIndexPrincipal{
+    }
+    
+     .inputContatoNome{
+        bottom: 47em;
+        width: 85%;
+        left: 0%;
+        height: 2em;
+    }
+    .inputContatoTelefone{
+        bottom: 46em;
+        width: 85%;
+        left: 0%;
+        height: 2em;
+    }
+    .inputContatoEmail{
+        bottom: 45em;
+        width: 85%;
+        left: 0%;
+        height: 2em;
+    }
+    .inputContatoMensagem{
+        bottom: 42em;
+        width: 85%;
+        left: 0%;
+        height: 9em;
+    }
+    
+    .divContatoConosco1{
+        bottom: 40em;
+        left: 18%;
+        width: 84%;
+    }
+    .divContatoConosco2{
+        bottom: 32em;
+        left: 6%;
+    }
+    .imgEmail{
+        right: 13%;
+        height: 1.5em;
+    }
+    .imgFacebook{
+        height: 2em;
+        right: 25em;
+        top: 3em;
+    }
+    .imgTelefone{
+        height: 3em;
+        right: 4%;
+    }
+    .imgLocalizacao{
+        height: 3em;
+        left: -13em;
+        top: 5em;
+    }
+    .buttonEnviar {
+        bottom: 42em;
+        left: 70%;
+    }
+    
+}
+@media screen and (max-width:529px){
+    /*index.html*/
+    .buttonNossoParceiro1{
+        bottom: 8.7em;
+        left: 10.5%;
+        width: 12em;
+        font-size: large;;
+    }
+    .buttonNossoParceiro2{
+        bottom: 10.6em;
+        left: 56%;
+        width: 12em;
+        font-size: large;;
+    }
+    
+    
+    /*Simulação quarto*/
+    .divSimulacao4{
+        
+    }
+    .tituloSimulacao4{
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: x-large;
+        bottom: 25em;
+        position: relative;
+    }
+    .subTituloSimulacao4{
+        left: 14%;
+        width: 14em;
+    }
+    .pNome{
+        right: 37%;
+    }
+    .inputNome{
+        width: 92%;
+
+    }
+    .pCPF{
+        right: 42%;
+    }
+    .inputCPF{
+        width: 92%;
+    }
+    .pEmail{
+        right: 41%;
+    }
+    .inputEmail{
+        width: 92%;
+    }
+    .pTelefone{
+        right: 41%;
+    }
+    .inputTelefone{
+        width: 92%;
+    }
+    .pSeusDados{
+        width: 20em;
+        left: 5%;
+    }
+    .divButtonContinuar{
+        position: relative;
+        bottom: 37em;
+        background: yellow;
+        width: 10em;
+        height: 2em;
+        border-radius: 0.5em;
+        left: 57%;
+        margin: 0em 0em -9em 0em;
+    }
+    .pButtonContinuar{
+        color: black;
+        position: relative;
+        top: 0.3em;
+    }
+    
+    
+    
+}
+@media screen and (max-width:520px){
+    .diminuirImagem{
+            height: 5em;
+    }
+}
+
+
+@media screen and (max-width:516px){
+
+/*Index.html*/
+    
+    .textoContato1{
+        right: -30%;
+    }
+    .textoContato2{
+        right: 18%;
+    }
+    .textoContato3{
+        right: 7%;
+    }
+    .imgContato1{
+        top: 2em;
+        right: -14%;
+    }
+    .imgContato2{
+        left: -6%;
+    }
+    .imgContato3{
+        left: 46%;
+    }
+    .tituloIndex {
+        width: 100%;
+        left: -1%;
+    }
+    .divContato {
+        background: white;
+        position: relative;
+        bottom: 4%;
+    }
+    .divInicioHorizontal {
+    }
+}
+@media screen and (max-width:500px){
+    /*Index.html*/
+    .bolaIndexSegunda{
+        float: right;
+        position: relative;
+        right: -50%;
+        bottom: -1em;
+    }
+    .bolaIndexTerceira{
+        float: right;
+        position: relative;
+        right: -39%;
+        bottom: -2em;
+    }
+    .bolaIndexQuarta{
+        float: right;
+        position: relative;
+        left: 5%;
+        top: 3em;
+
+    }
+    
+    
+   
+    .buttonNossoParceiro1{
+        bottom: 8.7em;
+        left: 2.5%;
+        width: 12em;
+        font-size: large;;
+    }
+    .buttonNossoParceiro2{
+        bottom: 10.7em;
+        left: 53%;
+        width: 12em;
+        font-size: large;;
+    }
+    .tituloNossoParceiro {
+        right: 0%;
+        top: 2.5em;
+    }
+    .textoNossoParceiro{
+        width: 80%;
+        left: 10%;
+    }
+}
+@media screen and (max-width:484px){
+    /*Index.html*/
+       
+        
+        
+        
+         .divContatoConosco1{
+            bottom: 40em;
+            left: 10%;
+        }
+        .divContatoConosco2{
+            bottom: 32em;
+            left: 6%;
+        }
+        .imgEmail{
+            right: 0%;
+            height: 1.5em;
+        }
+        .imgFacebook{
+            height: 2em;
+            right: 20em;
+        }
+        .imgTelefone{
+            height: 3em;
+            right: -9%;
+        }
+        .imgLocalizacao{
+            height: 3em;
+            left: -8.5em;
+            top: 5em;
+        }
+    
+        
+        
+}
+
+@media screen and (max-width:464px){
+
+        .divContatoConosco1{
+            bottom: 40em;
+            left: 10%;
+            width: 90%;
+        }
+        .divContatoConosco2{
+            bottom: 32em;
+            left: 6%;
+        }
+        .imgEmail{
+            right: 0%;
+            height: 1.5em;
+        }
+        .imgFacebook{
+            height: 2em;
+            right: 9em;
+        }
+        .imgTelefone{
+            height: 3em;
+            right: 24%;
+        }
+        .imgLocalizacao{
+            height: 3em;
+            left: -2.5em;
+            top: 1em;
+        }
+        
+        
+        
+        
+        
+        
+        .divRodape{
+            background: white;
+            height: 19em;
+        }
+        .imagRodapeOzaca{
+            position: relative;
+            width: 300%;
+            top: 7em;
+            right: 100%;
+        }
+
+    }
+
+@media screen and (max-width:460px){
+/*Index.html*/
+    /*Navbar*/
+    #navBarOriginal{
+        bottom: 2em;
+       }
+    .navBar{
+        height: 15em;
+        width: 100%;  
+    }
+    .navBarVerde{
+    }
+    .imgNavBar{
+       display: none;
+    }
+    .logo2{
+        height: 9em;
+        position: relative;
+        top: 2em;
+        left: 2em;
+    }
+    .iconeNav{
+        height: 2em;
+    }
+    #myNavbar{
+        top: 2em;
+        position: relative;
+    }
+    /**/
+    
+    
+    .textoContato1{
+        right: -32%;
+    }
+    .textoContato2{
+        right: 15%;
+    }
+    .textoContato3{
+        right: 7%;
+    }
+    .imgContato1{
+        top: 2em;
+        right: -14%;
+    }
+    .imgContato2{
+        left: -6%;
+    }
+    .imgContato3{
+        left: 48%;
+    }
+    .tituloIndex {
+        width: 100%;
+        left: -1%;
+    }
+    .divContato {
+        background: white;
+        position: relative;
+        bottom: 4%;
+    }
+    .divInicioHorizontal {
+        left: 3%;
+        width: 16em;
+    }
+    
+    
+    
+    
+    .buttonCadastroEmail {
+        left: 59%;
+        width: 7em;
+    }
+    .inputCadastroEmail {
+        width: 42%;
+        left: -5em;
+    }
+    .emailCadastro {
+        right: 44%;
+    }
+    
+}
+@media screen and (max-width:450px){
+/*Index.html*/
+    
+    .textoContato1{
+        right: 43%;
+    }
+    .textoContato2{
+        right: 15%;
+    }
+    .textoContato3{
+        right: 7%;
+    }
+    .imgContato1{
+        top: 2em;
+        right: -14%;
+    }
+    .imgContato2{
+        left: -6%;
+    }
+    .imgContato3{
+        left: 48%;
+    }
+    .tituloIndex {
+        width: 100%;
+        left: -1%;
+    }
+    .divContato {
+        background: white;
+        position: relative;
+        bottom: 4%;
+    }
+    .divInicioHorizontal {
+    }
+    
+    
+    
+    
+    .divSetimoIndexPrincipal{
+        height: 22em;
+    }
+    .tituloCotacao{
+        width: 100%;
+        top: 0.2em;
+    }
+    .imgCotacaoEuro{
+        bottom: -0.8em;
+        left: 15%;
+    }
+    .imgCotacaoDolar{
+        position: relative;
+        bottom: -6.8em;
+        left: -21%;
+    }
+    .imgCotacaoLibra{
+        bottom: -7.8em;
+        left: -2%;
+    }
+    
+}
+@media screen and (max-width:440px){
+/*Index.html*/
+    
+    .textoContato1{
+        right: 43%;
+    }
+    .textoContato2{
+        right: 10%;
+    }
+    .textoContato3{
+        right: 1%;
+    }
+    .imgContato1{
+        top: 2em;
+        right: -14%;
+    }
+    .imgContato2{
+        left: -6%;
+    }
+    .imgContato3{
+        left: 54%;
+    }
+    .tituloIndex {
+        width: 100%;
+        left: -1%;
+    }
+    .divContato {
+        background: white;
+        position: relative;
+        bottom: 4%;
+    }
+    .divInicioHorizontal {
+    }
+    
+    
+    
+    
+    
+}
+@media screen and (max-width:425px){
+    /*Index.html*/
+      .buttonNossoParceiro1{
+        bottom: 12.7em;
+        left: 25%;
+        width: 12em;
+        font-size: large;;
+    }
+    .buttonNossoParceiro2{
+        bottom: 12.5em;
+        left: 25%;
+        width: 12em;
+        font-size: large;;
+    }
+    .textoNossoParceiro{
+        width: 80%;
+        left: 10%;
+        top: 3.3em;
+    }
+}
+@media screen and (max-width:417px){
+/*Index.html*/
+    
+    .textoContato1{
+        right: 43%;
+        top: -1.5em;
+    }
+    .textoContato2{
+        right: 8%;
+    }
+    .textoContato3{
+        right: 1%;
+    }
+    .imgContato1{
+        top: 0.5em;
+        right: -19%;
+    }
+    .imgContato2{
+        left: -6%;
+    }
+    .imgContato3{
+        left: 53%;
+    }
+    .tituloIndex {
+        left: -4%;
+    }
+    .divContato {
+        background: white;
+        position: relative;
+        bottom: 1em;
+        z-index: 100;
+    }
+    .divInicioHorizontal {
+        width: 72%;
+        left: 17%;
+        height: 21%;
+
+    }
+    .divBranco {
+        left: 0;
+        width: 197px;   
+    }
+    .buttonSaibaMaisPrimeiro {
+        left: 0em;
+    }
+    .bolaIndex1 {
+        left: 20%;
+    }
+    .bolaIndex2 {
+        left: 20%;
+    }
+    .bolaIndex3 {
+        left: 20%;
+    }
+    .bolaIndex4 {
+        left: 20%;
+    }
+}
+@media screen and (max-width:400px){
+  /*Index.html*/
+    
+     .textoContato1{
+        right: 43%;
+        top: -1.5em;
+    }
+    .textoContato2{
+        right: 8%;
+        top: -1.2em;
+    }
+    .textoContato3{
+        right: 1%;
+    }
+    .imgContato1{
+        top: 2em;
+        right: 10%;
+    }
+    .imgContato2{
+        left: -29%;
+    }
+    .imgContato3{
+        left: 32%;
+    }
+    
+    
+    
+    .divSetimoIndexPrincipal{
+        height: 21em;
+    }
+    .tituloCotacao{
+        width: 100%;
+        top: 0.2em;
+    }
+    .imgCotacaoEuro{
+        bottom: -0.8em;
+        left: 15%;
+    }
+    .imgCotacaoDolar{
+        position: relative;
+        bottom: -6.8em;
+        left: -23%;
+    }
+    .imgCotacaoLibra{
+        bottom: -7.8em;
+        left: -2%;
+    }
+    
+    
+    /*divOitavo*/
+    .img1{
+        bottom: 37em;
+        left: -2%;
+    }
+    .img10{
+        bottom: 37em;
+        left: 2%;
+    }
+    .img100{
+        bottom: 34.5em;
+        right: 3%;
+    }
+    .imgOutrosValores{
+        bottom: 34.6em;
+        right: -2%;
+    } 
+    
+    
+    
+    
+    .tituloEntreContato {
+    }
+    
+    
+    
+        .imgEmail{
+            right: 9%;
+            height: 1.5em;
+        }
+        .imgFacebook{
+            height: 2em;
+            right: 8em;
+            top: 3em;
+        }
+        .imgTelefone{
+            height: 3em;
+            right: 22%;
+        }
+        .imgLocalizacao{
+            height: 3em;
+            left: -1em;
+            top: 1em;
+        }
+        .divRodape {
+            background: white;
+            height: 19em;
+        }
+       
+    
+    
+}
+
+
+/*                MOBILE               */
+
+@media screen and (max-width:375px){
+    /*Banner*/
+    .divIndexPrincipal {
+        background-position: center;
+    }
+    /**/
+    /*Sonho*/
+    .buttonSonho {
+        width: 9em;
+        left: 6%;
+    }
+    #pVantagens{
+        font-size: large;
+        top: 1em;
+
+    }
+    .divCorrecaoTerceiroIndex {
+        height: 23em;
+    }
+    .divTerceiroIndexPrincipal {
+        background-position: bottom;
+    }
+    /**/
+    /*Bolas*/
+    
+    .divSegundoIndexPrincipal {
+        height: 83em;
+    }
+   
+    /**/
+    /*Parceiros*/
+    .buttonNossoParceiro1 {
+        bottom: 12.7em;
+        left: 19%;
+    }
+    .buttonNossoParceiro2 {
+        bottom: 12.5em;
+        left: 19%; 
+    }
+    /**/
+    /*Cadastro Email*/
+    .inputCadastroEmail {
+        width: 42%;
+        left: -4em;
+    }
+    /**/
+    /*OpcoesEspeciais*/
+    .divOitavoIndexPrincipal {
+        background-position: center;
+        height: 70em;
+    }
+    /**/
+    /*ContatoRodape*/
+    .divNonoIndexPrincipal {
+        background-position: bottom center;
+    }
+    .tituloEntreContato {
+    }
+    /**/
+}
+
+@media screen and (max-width:320px){
+    
+    /*ContatoCima*/
+    .imgContato1{
+        
+    }
+    .imgContato2{
+        left: -22%;
+    }
+    .imgContato3{
+        left: 28%;
+    }
+    .textoContato1{
+        right: 2%;
+        top: -2em;
+    }
+    .textoContato2{
+        top: -0.2em;
+    }
+    .textoContato3{
+        
+    }
+    /**/
+    /*Bolas*/
+     .bolaIndex1 {
+        left: 10%;
+    }
+    .bolaIndex2 {
+        left: 10%;
+    }
+    .bolaIndex3 {
+        left: 10%;
+    }
+    .bolaIndex4 {
+        left: 10%;
+    }
+    .divSegundoIndexPrincipal {
+        height: 85em;
+    }
+   
+    /**/
+    /*Simulacao*/
+    .divButonSolicitarProposta {
+        height: 5.5em;
+        position: relative;
+        bottom: 5em;
+    }
+    /**/
+    /*Sonho*/
+    .buttonSonho {
+        width: 9em;
+        left: 6%;
+    }
+    #pVantagens{
+        font-size: large;
+        top: 1em;
+
+    }
+    .divCorrecaoTerceiroIndex {
+        height: 23em;
+    }
+    /**/
+    /*Parceiros*/
+    .imgParceirosEasy3 {
+        left: -3%;
+    }   
+    /**/
+    /*OpcoesEspeciais*/
+    .tituloOpcoesEspeciais1 {
+        top: 0em;
+    }
+    .tituloOpcoesEspeciais2 {
+        top: 0em;
+    }
+    .img1{
+        left: -2%;
+        top: 0em;
+    }
+    .img10 {
+        left: -2%;
+        top: 0em;
+    }
+    .img100 {
+        top: 0em;
+        right: 2%;
+    }
+    .imgOutrosValores {
+        right: 2%;
+        top: 0em;
+    }
+    /**/
+    
+}
+
+/**/
+/*Rodape correcao*/
+.logoRodape2{
+    display: none;
+}
+.imgLogoRodape2{
+    position: relative;
+    top: 8em;
+}
+@media screen and (max-width: 896px){
+    .imagRodapeOzaca {
+        display: none;
+    }
+    .logoRodape2{
+        display: block;
+    }
+}
+/**/
