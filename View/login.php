@@ -45,7 +45,7 @@
             <!-- Remind Passowrd -->
             <div id="formFooter">
                 <div><a class="underlineHover" href="forgotPassword">Esqueci minha senha</a></div>
-                <div><a class="underlineHover" href="register">registrar</a></div>
+                <div><a class="underlineHover" href="register">Registrar</a></div>
             </div>
 
         </div>
