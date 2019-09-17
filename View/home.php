@@ -40,7 +40,7 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger title-logo" style="font-family: BwSeidoRoundDEMO-Medium;" href="#page-top"><img class="img-logo" src="../img/logo-branco-sem-fundo.png" alt=""> consultou</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" onclick="butNavResponsive()">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -114,7 +114,7 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Serviço -->
   <section class="page-section" id="services">
     <div class="container">
       <h2 class="text-center mt-0">Nossos Serviços</h2>
@@ -122,7 +122,8 @@
       <div class="row">
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+            <!-- <i class="fas fa-4x fa-gem text-primary mb-4"></i> -->
+            <i class="far fa-4x fa-list-alt text-primary mb-4"></i>
             <h3 class="h4 mb-2">Histórico e avaliação</h3>
             <p class="text-muted mb-0">Todas as suas consultas e avaliações 
               ficarão no seu histório
@@ -131,16 +132,18 @@
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x fa-laptop text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Up to Date</h3>
-            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+            <!-- <i class="fas fa-4x fa-laptop text-primary mb-4"></i> -->
+            <i class="far fa-4x fa-calendar-alt text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Horários e Data</h3>
+            <p class="text-muted mb-0">Você pode verificar a disponibilidade dos profissionais a qualquer hora.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Ready to Publish</h3>
-            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+            <!-- <i class="fas fa-4x fa-globe text-primary mb-4"></i> -->
+            <i class="fas fa-4x fa-bell text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Receba Notificações</h3>
+            <p class="text-muted mb-0">Você será avisado antes de suas consultas para nunca mais esquece-las.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
@@ -321,6 +324,16 @@
         scrollTop: targetOffset - 100
         }, 500);
       });
+
+      function butNavResponsive() {
+        var nav = document.getElementById("navbarResponsive").style.display;
+        if(nav == "block") {
+          document.getElementById("navbarResponsive").style.display = "none";
+        } else {
+          document.getElementById("navbarResponsive").style.display = "block";
+        }
+        
+      }
     </script>
 
 </body>

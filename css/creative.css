@@ -4630,6 +4630,8 @@ input[type="button"].btn-block {
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0;
+    position: relative;
+    bottom: 8px;
   }
 }
 
@@ -10609,7 +10611,7 @@ hr.light {
 #mainNav {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  background-color: #398860;
   -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
 }
@@ -10617,11 +10619,11 @@ hr.light {
 #mainNav .navbar-brand {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  color: #212529;
+  color: #f1f1f1;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #6c757d;
+  color: #151719;
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   font-size: 0.9rem;
@@ -10646,14 +10648,14 @@ hr.light {
     color: rgba(255, 255, 255, 0.7);
   }
   #mainNav .navbar-brand:hover {
-    color: #fff;
+    color: #398860;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     color: rgba(255, 255, 255, 0.7);
     padding: 0 1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fff;
+    color: #398860;
   }
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;
@@ -10661,16 +10663,16 @@ hr.light {
   #mainNav.navbar-scrolled {
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    background-color: #fff;
+    background-color: #398860;
   }
   #mainNav.navbar-scrolled .navbar-brand {
-    color: #212529;
+    color: #398860;
   }
   #mainNav.navbar-scrolled .navbar-brand:hover {
     color: #398860;
   }
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link {
-    color: #212529;
+    color: #398860;
   }
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
     color: #398860;
@@ -10771,6 +10773,8 @@ header.masthead h1 {
     src: url("../img/BwSeidoRoundDEMO-Medium.otf");
 }
 
+/* Alterações Vitor*/
+
 .title-home {
   font-family: BwSeidoRoundDEMO-Medium;
   font-size: 2.5rem;
@@ -10850,4 +10854,45 @@ input:focus, select:focus {
 .home-image-cat {
   height: 350px;
   width: 450px;
+}
+
+@media (max-width: 992px) {
+  .home-search-div {
+    height: 200px;
+  }
+  
+  .home-search-text {
+    width: 90%;
+    left: 5%;
+    height: 40px;
+    top: 19px;
+  }
+  
+  .home-search-1 {
+    position: relative;
+    background-color: white;
+  }
+
+  .home-search-border-left {
+    border-bottom-style: solid;
+    border-bottom-color: #8888883d;
+  } 
+  
+  .home-icon-location {
+    bottom: 70%;
+    left: 46%;
+  }
+  
+  .home-button-search {
+    right: 1%;
+    bottom: 0%;
+    width: 98%;
+    top: 20%;
+  }
+}
+
+@media (max-width: 575px) {
+  .home-image-cat{
+    width: 100%; 
+  }
 }
