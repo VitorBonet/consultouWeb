@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../package/fontawesome/css/all.css"/>
     <link rel="stylesheet" type="text/css" href="../css/toastr.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link href="../css/creative.css" rel="stylesheet">
 	
     <script type="text/javascript" src="../js/jquery.min.js"></script>	
     <script type="text/javascript" src="../js/popper.min.js"></script>
@@ -32,7 +33,8 @@
         <div id="formContent">
             <!-- Icon -->
             <div class="fadeIn first">
-            <img src="../img/logo/weg.png" style="height: 100px;width: 140px;margin: 5%;" id="icon" alt="User Icon" />
+            <a class="navbar-brand js-scroll-trigger title-logo" style="font-family: BwSeidoRoundDEMO-Medium;" href="#page-top"><img class="img-logo" src="../img/logo-verde-sem-fundo.png" style="padding: 8rem 0;" alt=""> consultou</a>
+            <!-- <img src="../img/logo-verde-sem-fundo.png" style="height: 100px;width: 140px;margin: 5%;" id="icon" alt="User Icon" /> -->
             </div>
 
             <!-- Login Form -->
