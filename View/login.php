@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../package/fontawesome/css/all.css"/>
     <link rel="stylesheet" type="text/css" href="../css/toastr.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/creative.css"/>
 	
     <script type="text/javascript" src="../js/jquery.min.js"></script>	
     <script type="text/javascript" src="../js/popper.min.js"></script>
@@ -27,7 +28,7 @@
 
 <body> 
 
-
+ <div class="background-login">
     <div class="wrapper fadeInDown">
         <div id="formContent">
             <!-- Icon -->
@@ -36,7 +37,6 @@
                     <img class="img-logo" style="height: 80px;position: relative;left: 12px;" src="../img/logo-branco-sem-fundo.png" alt=""> consultou
                 </a>
             </div>
-
             <!-- Login Form -->
             <form>
                 <input type="text" id="user" class="fadeIn second" name="user" placeholder="Usuário">
@@ -52,7 +52,7 @@
 
         </div>
     </div>
-
+</div>
 <script>
     // tecla enter apertada
     document.addEventListener('keypress', function(e){
