@@ -10856,6 +10856,45 @@ input:focus, select:focus {
   width: 450px;
 }
 
+.background-register {
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.75) 0%, rgba(92, 77, 66, 0.35) 100%), url(../img/med-pc.jpg), no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.buttonChoiceRegister {
+  background-color: #398860;
+  width: 281px;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px 20px 10px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonChoiceRegister:hover {
+  border-color: #398860;
+  border: 0.5px solid;
+  color: #398860;
+  background-color: white;
+}
+
+.title-choice-register {
+  font-size: 2.0rem;
+  color: #398860;
+  padding: 15px 0px 15px 0px;
+}
+
 @media (max-width: 992px) {
   .home-search-div {
     height: 200px;
