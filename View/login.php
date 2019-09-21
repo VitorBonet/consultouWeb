@@ -32,7 +32,9 @@
         <div id="formContent">
             <!-- Icon -->
             <div class="fadeIn first">
-            <img src="../img/logo/weg.png" style="height: 100px;width: 140px;margin: 5%;" id="icon" alt="User Icon" />
+                <a class="navbar-brand js-scroll-trigger title-logo" style="font-family: BwSeidoRoundDEMO-Medium;font-size: 2rem;color: #ffffff;" href="#page-top">
+                    <img class="img-logo" style="height: 80px;position: relative;left: 12px;" src="../img/logo-branco-sem-fundo.png" alt=""> consultou
+                </a>
             </div>
 
             <!-- Login Form -->
@@ -44,8 +46,8 @@
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                <div><a class="underlineHover" href="forgotPassword">esqueci minha senha</a></div>
-                <div><a class="underlineHover" href="register">registrar</a></div>
+                <div><a class="underlineHover" href="forgotPassword">Esqueci minha senha</a></div>
+                <div><a class="underlineHover" href="register">Registrar</a></div>
             </div>
 
         </div>

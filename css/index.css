@@ -11,7 +11,7 @@ html {
   }
   
   a {
-    color: #5b9bd5;
+    color: #3a8861;
     display:inline-block;
     text-decoration: none;
     font-weight: 400;
@@ -44,7 +44,7 @@ html {
   #formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
-    background: #fff;
+    background: #3b8862;
     padding: 30px;
     width: 90%;
     max-width: 450px;
@@ -74,7 +74,7 @@ html {
   
   h2.active {
     color: #0d0d0d;
-    border-bottom: 2px solid #5b9bd5;
+    border-bottom: 2px solid #3d8864;
   }
   
   
@@ -82,7 +82,7 @@ html {
   /* FORM TYPOGRAPHY*/
   
   input[type=button], input[type=submit], input[type=reset]  {
-    background-color: #5b9bd5;
+    background-color: #398860;
     border: none;
     color: white;
     padding: 15px 80px;
@@ -138,7 +138,7 @@ html {
   
   input[type=text]:focus {
     background-color: #fff;
-    border-bottom: 2px solid #5b9bd5;
+    border-bottom: 2px solid #3d8864;
   }
   
   input[type=text]:placeholder {
@@ -168,7 +168,7 @@ html {
   
   input[type=password]:focus {
     background-color: #fff;
-    border-bottom: 2px solid #5b9bd5;
+    border-bottom: 2px solid #3d8864;
   }
   
   input[type=password]:placeholder {
@@ -265,7 +265,7 @@ html {
     bottom: -10px;
     width: 0;
     height: 2px;
-    background-color: #5b9bd5;
+    background-color: #3d8864;
     content: "";
     transition: width 0.2s;
   }
