@@ -83,7 +83,7 @@
         setTimeout("window.location='home'", 1000);
     }
     function loginfailed() {
-        setTimeout("window.location='login'", 2000);
+        //setTimeout("window.location='login'", 2000);
     }
     //click do botao manda as informacoes para autenticacao do usuario
     $('#submitAvancar').click(function () {
@@ -91,19 +91,19 @@
             method: "POST",
             url: "../Controller/userController",
             data: {
-                <?php echo USER_EMAIL; ?>: $('#user').val(),
-                <?php echo USER_PASSWORD; ?>: $('#password').val(),
+                user: $('#user').val(),
+                password: $('#password').val(),
             },
             success: function (msg) {
                 msg = JSON.parse(msg);
-                if (msg.resposta === 'true') {
+                if (msg.resposta === 'success') {
                     loginsucessfully();
                 } else {
                     switch(msg.resposta){
                         case 'false':
-                            toastr.error("email invalido","erro!"); 
+                            toastr.error("email ou senha invalido","erro!"); 
                             break
-                        case 'waiting':
+                        case 'error':
                             toastr.error("","erro!");
                             break
                     }

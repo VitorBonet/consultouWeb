@@ -9,7 +9,7 @@ class DAO {
         $host = "localhost";
         $user = "root";
         $pass = "";
-        $banco = "WEG_LOGISTICS";
+        $banco = "CONSULTOU";
         $charsetdb = "utf8";
         $conexao = new mysqli($host, $user, $pass, $banco) or die("A conexão com o Banco de dados Falhou, tente novamente!" . mysqli_connect_error());
         $conexao->set_charset($charsetdb);
