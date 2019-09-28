@@ -44,7 +44,7 @@ html {
   #formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
-    background: #fff;
+    background: #3b8862;
     padding: 30px;
     width: 90%;
     max-width: 450px;
@@ -84,7 +84,7 @@ html {
   input[type=button], input[type=submit], input[type=reset]  {
     background-color: #3a8861;
     border: none;
-    color: white;
+    color:#ffffff;
     padding: 15px 80px;
     text-align: center;
     text-decoration: none;
