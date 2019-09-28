@@ -50,26 +50,54 @@
             </div>
 
             <!-- Cadastro usuário -->
-            <div id="divUser" style="display: none;">
-                <div id="formContent" style="max-width: 650px;">
+            <div id="divUser" style="display: none;width: 80%;left: 2%;">
+                <div id="formContent" style="max-width: 70%;position: relative;left: 14%;">
                     <!-- Icon -->
                     <div class="fadeIn first">
-                    <!-- <a class="navbar-brand js-scroll-trigger title-logo" style="font-family: BwSeidoRoundDEMO-Medium;" href="#page-top"><img class="img-logo" src="../img/logo-verde-sem-fundo.png" style="padding: 8rem 0;" alt=""> consultou</a> -->
-                    <!-- <img src="../img/logo-verde-sem-fundo.png" style="height: 100px;width: 140px;margin: 5%;" id="icon" alt="User Icon" /> -->
-                    <h1>Cadastro</h1>
+                    <h1 class="title-choice-register">CRIE UMA CONTA</h1>
+                    <p class="subTitle-register">E marque sua primeira consulta!</p>
                     </div>
                     <!-- Login Form -->
-                    <div class="row">
+                    <div class="row row-register">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <label class="fadeIn label-register">E-mail *</label>
+                            <input type="text" id="email" class="fadeIn input-register" >
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <label class="fadeIn label-register">Confirmação de E-mail *</label>
+                            <input type="text" id="confirmEmail" class="fadeIn input-register" >
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <label class="fadeIn label-register">Nome Completo*</label>
+                            <input type="text" id="name" class="fadeIn input-register" >
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <label class="fadeIn label-register">Data de Nascimento *</label>
+                            <input type="date" id="dateBirth" class="fadeIn input-register" >
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <label class="fadeIn label-register">Senha *</label>
+                            <input type="password" id="password" class="fadeIn input-register" >
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <label class="fadeIn label-register">Confirme sua senha *</label>
+                            <input type="password" id="password" class="fadeIn input-register" >
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12" style="margin: 20px 0px 10px 0px;">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="fadeIn btn btn-secondary radio-register active">
+                                    <input type="radio" name="options" id="male" autocomplete="off" checked> Masculino
+                                </label>
+                                <label class="fadeIn btn btn-secondary  radio-register">
+                                    <input type="radio" name="options" id="female" autocomplete="off"> Feminino
+                                </label>
+                            </div>
+                        </div>
+
                         <div class="col-lg-12">
-                            <input type="button" id="submitAvancar" class="fadeIn fourth" value="Sou Usuário">
-                        <div>
-                        <div class="col-lg-12">
-                            <input type="button" id="submitAvancar" class="fadeIn fourth" value="Sou Médico">
-                        <div>
-                        <div class="col-lg-12">
-                            <input type="button" id="submitAvancar" class="fadeIn fourth" value="Sou Consultório">
-                        <div>
-                    <div>
+                            <input style="margin: 30px 0px 30px 0px;" type="button" id="submitAvancar" class="fadeIn fourth" value="Registrar">
+                        </div>
+                        
                 </div>
             </div>
 
