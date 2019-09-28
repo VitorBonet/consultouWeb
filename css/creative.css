@@ -171,7 +171,7 @@ a {
 }
 
 a:hover {
-  color: #d6370c;
+  color: #f6f6f5;
   text-decoration: underline;
 }
 
@@ -10787,6 +10787,10 @@ header.masthead h1 {
 
 .img-logo {
   height: 32px;
+}
+
+.img-logo-login {
+  height: 60px;
 }
 
 .home-search-div {
