@@ -82,17 +82,16 @@ html {
   /* FORM TYPOGRAPHY*/
   
   input[type=button], input[type=submit], input[type=reset]  {
-    background-color: #398860;
+    background-color:#3c8863;
     border: none;
-    color: white;
+    color:#ffffff;
     padding: 15px 80px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     text-transform: uppercase;
     font-size: 13px;
-    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-    box-shadow: 0 10px 30px 0 rgba(91,155,213,0.4);
+    border: 1px solid;
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
     margin: 5px 20px 40px 20px;
@@ -104,7 +103,8 @@ html {
   }
   
   input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-    background-color: #39ace7;
+    background-color: #f6f6f6;
+    color:#3c8863;
   }
   
   input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {

@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../package/fontawesome/css/all.css"/>
     <link rel="stylesheet" type="text/css" href="../css/toastr.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/index.css"/>
-    <link href="../css/creative.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/creative.css"/>
 	
     <script type="text/javascript" src="../js/jquery.min.js"></script>	
     <script type="text/javascript" src="../js/popper.min.js"></script>
@@ -28,7 +28,7 @@
 
 <body> 
 
-
+ <div class="background-login">
     <div class="wrapper fadeInDown">
         <div id="formContent">
             <!-- Icon -->
@@ -36,7 +36,6 @@
               <a class="navbar-brand js-scroll-trigger title-logo" style="font-family: BwSeidoRoundDEMO-Medium;" href="#page-top"><img class="img-logo" src="../img/logo-verde-sem-fundo.png" style="padding: 8rem 0;" alt=""> consultou</a>
               <!-- <img src="../img/logo-verde-sem-fundo.png" style="height: 100px;width: 140px;margin: 5%;" id="icon" alt="User Icon" /> -->
             </div>
-
             <!-- Login Form -->
             <form>
                 <input type="text" id="user" class="fadeIn second" name="user" placeholder="Usuário">
@@ -52,7 +51,7 @@
 
         </div>
     </div>
-
+</div>
 <script>
     // tecla enter apertada
     document.addEventListener('keypress', function(e){
@@ -83,7 +82,7 @@
         setTimeout("window.location='home'", 1000);
     }
     function loginfailed() {
-        setTimeout("window.location='login'", 2000);
+        //setTimeout("window.location='login'", 2000);
     }
     //click do botao manda as informacoes para autenticacao do usuario
     $('#submitAvancar').click(function () {
@@ -91,19 +90,19 @@
             method: "POST",
             url: "../Controller/userController",
             data: {
-                <?php echo USER_EMAIL; ?>: $('#user').val(),
-                <?php echo USER_PASSWORD; ?>: $('#password').val(),
+                user: $('#user').val(),
+                password: $('#password').val(),
             },
             success: function (msg) {
                 msg = JSON.parse(msg);
-                if (msg.resposta === 'true') {
+                if (msg.resposta === 'success') {
                     loginsucessfully();
                 } else {
                     switch(msg.resposta){
                         case 'false':
-                            toastr.error("email invalido","erro!"); 
+                            toastr.error("email ou senha invalido","erro!"); 
                             break
-                        case 'waiting':
+                        case 'error':
                             toastr.error("","erro!");
                             break
                     }
