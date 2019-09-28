@@ -61,7 +61,7 @@
                     <div class="row row-register">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <label class="fadeIn label-register">E-mail *</label>
-                            <input type="text" id="email" class="fadeIn input-register" >
+                            <input type="text" id="email" class="fadeIn input-register is-invalid" >
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <label class="fadeIn label-register">Confirmação de E-mail *</label>

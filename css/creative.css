@@ -1,3 +1,4 @@
+    
 /*!
  * Start Bootstrap - Creative v5.1.7 (https://startbootstrap.com/template-overviews/creative)
  * Copyright 2013-2019 Start Bootstrap
@@ -10898,6 +10899,14 @@ input:focus, select:focus {
 .subTitle-register {
   color: #3a8861;
   margin: -23px 0px 15px 0px;
+}
+
+.background-register {
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.75) 0%, rgba(92, 77, 66, 0.35) 100%), url(../img/med-pc.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 100%;
 }
 
 .row-register {
