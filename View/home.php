@@ -8,7 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Creative - Start Bootstrap Theme</title>
+  <title>Home</title>
+    <link rel="icon" 
+        type="image/png" 
+        href="../img/logo-branco-sem-fundo.png" />
 
   
     <!-- <link rel="stylesheet" type="text/css" href="../css/index.css"/> -->
@@ -40,7 +43,7 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger title-logo" style="font-family: BwSeidoRoundDEMO-Medium;" href="#page-top"><img class="img-logo" src="../img/logo-branco-sem-fundo.png" alt=""> consultou</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" onclick="butNavResponsive()">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -56,6 +59,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="login">Logar</a>
           </li>
         </ul>
       </div>
@@ -105,16 +111,21 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0" id="teste">We've got what you need!</h2>
+          <h2 class="text-white mt-0" id="teste">A Consultou!</h2>
           <hr class="divider light my-4">
-          <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+          <p class="text-white-50 mb-4">Criada em 2019 por jovens desenvolvedores com o intuito de 
+            inovar na forma de encontrar e gerenciar consultas médicas e de profissionais da saúde. 
+            Possuímos uma equipe focada em facilitar e agilizar ao máximo a usabilidade de nossos clientes, 
+            procuramos a cada dia aumentar nossa gama de profissionais e atender à mais regiões, proporcionando 
+            para você uma experiência única! Venha fazer parte desta missão.
+          </p>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Vamos Começar!</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Serviço -->
   <section class="page-section" id="services">
     <div class="container">
       <h2 class="text-center mt-0">Nossos Serviços</h2>
@@ -122,7 +133,8 @@
       <div class="row">
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+            <!-- <i class="fas fa-4x fa-gem text-primary mb-4"></i> -->
+            <i class="far fa-4x fa-list-alt text-primary mb-4"></i>
             <h3 class="h4 mb-2">Histórico e avaliação</h3>
             <p class="text-muted mb-0">Todas as suas consultas e avaliações 
               ficarão no seu histório
@@ -131,23 +143,26 @@
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x fa-laptop text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Up to Date</h3>
-            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+            <!-- <i class="fas fa-4x fa-laptop text-primary mb-4"></i> -->
+            <i class="far fa-4x fa-calendar-alt text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Horários e Data</h3>
+            <p class="text-muted mb-0">Você pode verificar a disponibilidade dos profissionais a qualquer hora.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Ready to Publish</h3>
-            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+            <!-- <i class="fas fa-4x fa-globe text-primary mb-4"></i> -->
+            <i class="fas fa-4x fa-bell text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Receba Notificações</h3>
+            <p class="text-muted mb-0">Você será avisado antes de suas consultas para não esquece-las.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Made with Love</h3>
-            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+            <i class="fas fa-4x fa-search text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Pesquise</h3>
+            <p class="text-muted mb-0">Possuímos enumeras categorias para você encontrar o profissional que precisa.
+            </p>
           </div>
         </div>
       </div>
@@ -255,20 +270,29 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
-          <h2 class="mt-0">Let's Get In Touch!</h2>
+          <h2 class="mt-0">Entre em Contato!</h2>
           <hr class="divider my-4">
-          <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+          <p class="text-muted mb-5">Possui alguma dúvida ou gostaria de entrar em contato conosco? Ligue ou acesse nossas redes sociais,
+             estamos dispostos a receber qualquer tipo de contato!</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+        <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div>+1 (202) 555-0149</div>
+          <div>(47) 3223-2332</div>
         </div>
-        <div class="col-lg-4 mr-auto text-center">
+        <div class="col-lg-3 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
           <!-- Make sure to change the email address in anchor text AND the link below! -->
           <a class="d-block" href="mailto:consultou@gmail.com">consultou@gmail.com</a>
+        </div>
+        <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
+          <i class="fab fa-facebook-f fa-3x mb-3 text-muted"></i>
+          <a class="d-block" href="https://www.facebook.com">consultou@gmail.com</a>
+        </div>
+        <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
+          <i class="fab fa-instagram fa-3x mb-3 text-muted"></i>
+          <a class="d-block" href="https://www.instagram.com">@consultou</a>
         </div>
       </div>
     </div>
@@ -321,6 +345,16 @@
         scrollTop: targetOffset - 100
         }, 500);
       });
+
+      function butNavResponsive() {
+        var nav = document.getElementById("navbarResponsive").style.display;
+        if(nav == "block") {
+          document.getElementById("navbarResponsive").style.display = "none";
+        } else {
+          document.getElementById("navbarResponsive").style.display = "block";
+        }
+        
+      }
     </script>
 
 </body>

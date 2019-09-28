@@ -33,9 +33,8 @@
         <div id="formContent">
             <!-- Icon -->
             <div class="fadeIn first">
-                <a class="navbar-brand js-scroll-trigger title-logo" style="font-family: BwSeidoRoundDEMO-Medium;font-size: 2rem;color: #ffffff;" href="#page-top">
-                    <img class="img-logo" style="height: 80px;position: relative;left: 12px;" src="../img/logo-branco-sem-fundo.png" alt=""> consultou
-                </a>
+              <a class="navbar-brand js-scroll-trigger title-logo" style="font-family: BwSeidoRoundDEMO-Medium;" href="#page-top"><img class="img-logo" src="../img/logo-verde-sem-fundo.png" style="padding: 8rem 0;" alt=""> consultou</a>
+              <!-- <img src="../img/logo-verde-sem-fundo.png" style="height: 100px;width: 140px;margin: 5%;" id="icon" alt="User Icon" /> -->
             </div>
             <!-- Login Form -->
             <form>
