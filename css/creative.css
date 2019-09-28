@@ -10895,6 +10895,76 @@ input:focus, select:focus {
   padding: 15px 0px 15px 0px;
 }
 
+.subTitle-register {
+  color: #3a8861;
+  margin: -23px 0px 15px 0px;
+}
+
+.row-register {
+  width: 90%;
+  position: relative;
+  left: 7%;
+}
+
+.input-register {
+  height: 32px !important;
+  border: 1px solid #c5cdd8 !important;
+  background-color: white !important;
+  text-align: left !important;
+  font-size: 12px !important;
+  padding: 9px 20px !important;
+  width: 95% !important;
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.input-register:focus{
+  border: 1px solid #398860 !important;
+}
+
+.radio-register {
+  background-color: #ffffff;
+  color: #3b8862;
+}
+
+.radio-register.active {
+  background-color: #3a8861 !important;
+  color: white !important;
+}
+
+.radio-register:hover {
+  background-color: #3a8861 !important;
+  color: white !important;
+}
+
+.label-register {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 8px;
+  position: relative;
+  left: 8px;
+  top: 9px;
+  font-weight: 500;
+  width: 75%;
+  text-align: left;
+}
+
 @media (max-width: 992px) {
   .home-search-div {
     height: 200px;
