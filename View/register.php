@@ -1,3 +1,9 @@
+<?php
+include_once '../Model/User.Class.php';
+
+$ObjUser = new User();
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head runat="server">
@@ -23,6 +29,7 @@
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/toastr.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap4.0.min.js"></script>
+    <script type="text/javascript" src="../js/consultou-tools.js"></script>
 
 </head>
 
@@ -61,27 +68,45 @@
                     <div class="row row-register">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <label class="fadeIn label-register">E-mail *</label>
-                            <input type="text" id="email" class="fadeIn input-register is-invalid" >
+                            <input type="text" id="email" class="form-control fadeIn input-register" onBlur="validFields(this, 'email')" >
+                            <div class="invalid-feedback" id="invalidEmail">
+                                Por favor, escolha um email válido
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <label class="fadeIn label-register">Confirmação de E-mail *</label>
-                            <input type="text" id="confirmEmail" class="fadeIn input-register" >
+                            <input type="text" id="confirmEmail" class="form-control fadeIn input-register" onBlur="validFields(this, 'confirmEmail')">
+                            <div class="invalid-feedback">
+                                Por favor, os dois emails devem ser iguais.
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <label class="fadeIn label-register">Nome Completo*</label>
-                            <input type="text" id="name" class="fadeIn input-register" >
+                            <input type="text" id="name" class="form-control fadeIn input-register" onBlur="validFields(this)">
+                            <div class="invalid-feedback">
+                                Por favor, escolha um nome de usuário.
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <label class="fadeIn label-register">Data de Nascimento *</label>
-                            <input type="date" id="dateBirth" class="fadeIn input-register" >
+                            <input type="date" id="dateBirth" class="form-control fadeIn input-register" onBlur="validFields(this)">
+                            <div class="invalid-feedback">
+                                Por favor, escolha uma data de nascimento.
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <label class="fadeIn label-register">Senha *</label>
-                            <input type="password" id="password" class="fadeIn input-register" >
+                            <input type="password" id="password" class="form-control fadeIn input-register" onBlur="validFields(this)">
+                            <div class="invalid-feedback">
+                                Por favor, escolha uma senha.
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <label class="fadeIn label-register">Confirme sua senha *</label>
-                            <input type="password" id="password" class="fadeIn input-register" >
+                            <input type="password" id="confirmPassword" class="form-control fadeIn input-register"  onBlur="validFields(this, 'confirmPassword')">
+                            <div class="invalid-feedback">
+                                Por favor,as duas senhas devem ser iguais.
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12" style="margin: 20px 0px 10px 0px;">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -111,63 +136,78 @@
             document.getElementById("submitAvancar").click();
         }
     }, false);
-
-
-    toastr.options = {
-		"closeButton": true,
-		"debug": false,
-		"progressBar": false,
-		"positionClass": "toast-bottom-right",
-		"onclick": null,
-		"showDuration": "300",
-		"hideDuration": "1000",
-		"timeOut": "5000",
-		"extendedTimeOut": "1000",
-		"showEasing": "swing",
-		"hideEasing": "linear",
-		"showMethod": "fadeIn",
-		"hideMethod": "fadeOut"
-      }
       
     function choiceUser() {
         document.getElementById('divChoise').style.display = 'none';
         document.getElementById('divUser').style.display = 'block';
     }
 
-    //funcoes que mudam para area de logado
-    function loginsucessfully() {
-        setTimeout("window.location='home'", 1000);
+    function validFields(e, field) {
+        switch (field) {
+            case 'email':
+                if( $(e).val() == "" || !validEmail($(e).val())) {
+                    $(e).addClass("is-invalid");
+                }else{
+                    $(e).removeClass("is-invalid");
+                }
+                break;
+            case 'confirmEmail':
+                if( $(e).val().trim() != $('#email').val().trim()) {
+                    $(e).addClass("is-invalid");
+                }else{
+                    $(e).removeClass("is-invalid");
+                }
+                break;
+            case 'confirmPassword':
+                if( $(e).val().trim() != $('#password').val().trim()) {
+                    $(e).addClass("is-invalid");
+                }else{
+                    $(e).removeClass("is-invalid");
+                }
+                break;
+                
+            default:
+                if( $(e).val() == "") {
+                    $(e).addClass("is-invalid");
+                } else{
+                    $(e).removeClass("is-invalid");
+                }
+                break;
+        }
     }
-    function loginfailed() {
-        setTimeout("window.location='login'", 2000);
-    }
-    //click do botao manda as informacoes para autenticacao do usuario
-    // $('#submitAvancar').click(function () {
-    //     $.ajax({
-    //         method: "POST",
-    //         url: "../Controller/userController",
-    //         data: {
-    //             <?php //echo USER_EMAIL; ?>: $('#user').val(),
-    //             <?php //echo USER_PASSWORD; ?>: $('#password').val(),
-    //         },
-    //         success: function (msg) {
-    //             msg = JSON.parse(msg);
-    //             if (msg.resposta === 'true') {
-    //                 loginsucessfully();
-    //             } else {
-    //                 switch(msg.resposta){
-    //                     case 'false':
-    //                         toastr.error("email invalido","erro!"); 
-    //                         break
-    //                     case 'waiting':
-    //                         toastr.error("","erro!");
-    //                         break
-    //                 }
-    //                 loginfailed();
-    //             }
-    //         }
-    //     });
-    // });
+    
+    $('#submitAvancar').click(function () {
+        $.ajax({
+            method: "POST",
+            url: "../Controller/userController",
+            data: {
+                <?php echo USER_EMAIL; ?>: $('#email').val(),
+                confirmEmail: $('#confirmEmail').val(),
+                <?php echo USER_NAME; ?>: $('#name').val(),
+                <?php echo USER_DATE_BIRTH; ?>: $('#dateBirth').val(),
+                <?php echo USER_PASSWORD; ?>: $('#password').val(),
+                confirmPassword: $('#confirmPassword').val(),
+                //<?php //echo USER_EMAIL; ?>: $('#options').val(), usar função getradio weg
+            },
+            success: function (msg) {
+                try {
+                    msg = JSON.parse(msg);
+                } catch (error) {
+                    msg = "false";
+                }
+                
+                switch (msg) {
+                    case 'true':
+                        toastr.success("Registro efetuado com sucesso!","sucesso!"); 
+                        break;
+                
+                    default:
+                        toastr.error("Ocorreu um erro, entre em contato com o administrador do sistema!","erro!"); 
+                        break;
+                }
+            }
+        });
+    });
 </script>
 
 
