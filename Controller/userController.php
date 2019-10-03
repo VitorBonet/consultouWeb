@@ -14,8 +14,21 @@ $ObjDAO = new DAO();
 //$ObjUser = new User();
 
 //pega os valores do cadastro
- $user       = $_REQUEST['user'];
- $password    = $_REQUEST['password'];
+$typeRegister = $_REQUEST['typeRegister'];
+
+switch ($typeRegister) {
+    case 'user':
+        # code...
+        break;
+    case 'doctor':
+        # code...
+        break;
+    case 'clinic':
+        # code...
+        break;
+}
+ $user     = $_REQUEST['user'];
+ $password = $_REQUEST['password'];
 
  // verifica se existe no banco de dados um usuário com essa senha
 $param = " WHERE USE_EMAIL = '" . $user . "' AND USE_SENHA = '" . $password . "'";
@@ -25,14 +38,12 @@ try {
 } catch (Exce $th) {
     //throw $th;
 }
-$consult = $ObjDAO->consultar('USUARIO_USER_CSL', '*', $param);
-var_dump($consult);
+
 if (false) {
     $naocadastrado = "false";
     echo json_encode(array('resposta' => $naocadastrado));
     exit;
 }
-
 
 if ($userId != null) {
     $mensagem = 'success';
