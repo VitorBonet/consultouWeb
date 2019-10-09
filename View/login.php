@@ -40,7 +40,7 @@
             <form>
                 <input type="text" id="user" class="fadeIn second" name="user" placeholder="Usuário">
                 <input type="password" id="password" class="fadeIn third" name="password" placeholder="Senha">
-                <input type="button" id="submitAvancar" class="fadeIn fourth" value="Login">
+                <input type="button" id="submitAvancar" class="fadeIn fourth" value="Login" style="border: 1px solid;">
             </form>
 
             <!-- Remind Passowrd -->
