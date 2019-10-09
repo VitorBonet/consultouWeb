@@ -4,14 +4,10 @@ class User {
     private $id;
     private $name;
     private $email;
-    private $telephone;
-    private $telephoneCell;
     private $password;
-    private $dateAdd;
-    private $language;
-    private $country;
-    private $status;
-    private $type;
+    private $dateBirth;
+    private $sex;
+    private $dateCreated;
     private $lastAccess;
     private $accessNumber;
     
@@ -20,14 +16,10 @@ class User {
         define("USER_ID", "USE_ID");
         define("USER_NAME", "USE_NAME");
         define("USER_EMAIL", "USE_EMAIL");
-        define("USER_TELEPHONE", "USE_TELEPHONE");
-        define("USER_TELEPHONE_CELL", "USE_TELEPHONE_CELL");
         define("USER_PASSWORD", "USE_PASSWORD");
-        define("USER_DATE_ADD", "USE_DATE_ADD");
-        define("USER_LANGUAGE", "USE_LANGUAGE"); 
-        define("USER_COUNTRY", "USE_COUNTRY"); 
-        define("USER_STATUS", "USE_STATUS"); 
-        define("USER_TYPE", "USE_TYPE"); 
+        define("USER_DATE_BIRTH", "USE_DATE_BIRTH");
+        define("USER_SEX", "USE_SEX");
+        define("USER_DATE_CREATED", "USE_DATE_CREATED");
         define("USER_LAST_ACCESS", "USE_LAST_ACCESS"); 
         define("USER_ACCESS_NUMBER", "USE_ACCESS_NUMBER"); 
     }
@@ -41,29 +33,17 @@ class User {
     function getEmail() {
         return $this->email;
     }
-    function getTelephone() {
-        return $this->telephone;
-    }
-    function getTelephoneCell() {
-        return $this->telephoneCell;
-    }
     function getPassword() {
         return $this->password;
     }
-    function getDateAdd() {
-        return $this->dateAdd;
+    function getDateBirth() {
+        return $this->dateBirth;
     }
-    function getLanguage() {
-        return $this->language;
+    function getSex() {
+        return $this->sex;
     }
-    function getCountry() {
-        return $this->country;
-    }
-    function getStatus() {
-        return $this->status;
-    }
-    function getType() {
-        return $this->type;
+    function getDateCreated() {
+        return $this->dateCreated;
     }
     function getLastAccess() {
         return $this->lastAccess;
@@ -82,29 +62,17 @@ class User {
     function setEmail($email) {
         $this->email = $email;
     }
-    function setTelephone($telephone) {
-        $this->telephone = $telephone;
-    }
-    function setTelephoneCell($telephoneCell) {
-        $this->telephoneCell = $telephoneCell;
-    }
     function setPassword($password) {
         $this->password = $password;
     }
-    function setDateAdd($dateAdd) {
-        $this->dateAdd = $dateAdd;
+    function setDateBirth($dateBirth) {
+        $this->dateBirth = $dateBirth;
     }
-    function setLanguage($language) {
-        $this->language = $language;
+    function setSex($sex) {
+        $this->sex = $sex;
     }
-    function setCountry($country) {
-        $this->country = $country;
-    }
-    function setStatus($status) {
-        $this->status = $status;
-    }
-    function setType($type) {
-        $this->type = $type;
+    function setDateCreated($dateCreated) {
+        $this->dateCreated = $dateCreated;
     }
     function setLastAccess($lastAccess) {
         $this->lastAccess = $lastAccess;
@@ -118,14 +86,10 @@ class User {
         $this->setId($dados[USER_ID]);
         $this->setName($dados[USER_NAME]);
         $this->setEmail($dados[USER_EMAIL]);
-        $this->setTelephone($dados[USER_TELEPHONE]);
-        $this->setTelephoneCell($dados[USER_TELEPHONE_CELL]);
         $this->setPassword($dados[USER_PASSWORD]);
-        $this->setDateAdd($dados[USER_DATE_ADD]);
-        $this->setLanguage($dados[USER_LANGUAGE]);
-        $this->setCountry($dados[USER_COUNTRY]);
-        $this->setStatus($dados[USER_STATUS]);
-        $this->setType($dados[USER_TYPE]);
+        $this->setDateBirth($dados[USER_DATE_BIRTH]);
+        $this->setSex($dados[USER_SEX]);
+        $this->setDateCreated($dados[USER_DATE_CREATED]);
         $this->setLastAccess($dados[USER_LAST_ACCESS]);
         $this->setAccessNumber($dados[USER_ACCESS_NUMBER]);
     }

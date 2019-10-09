@@ -2,69 +2,55 @@
 
 class DAO {
 
-    //abrimos a conexao através de uma função
-    public function abreconexao() {
-        //definimos os parametros da conexao - Servidor Local
+    //abrimos a connection através de uma função
+    public function OpenConnection() {
+        //definimos os parametros da connection - Servidor Local
+        // $xml =  simplexml_load_file("../../web.config"); //or die("Error: Cannot create object"); 
+        // if(!$xml){
+        //     $xml =  simplexml_load_file("../../../web.config");
+        // }
+        // //in my case web.config is in previous directory
+        // $array = json_decode(json_encode((array) $xml), 1);
+
+        // $servidor = $xml->appSettings->xpath('add[@key="dbServer"]')[0]["value"];
+        // $instancia = $xml->appSettings->xpath('add[@key="dbInstance"]')[0]["value"];
+        // $database = $xml->appSettings->xpath('add[@key="dbDatabase"]')[0]["value"];
+        // $usuario = $xml->appSettings->xpath('add[@key="dbUser"]')[0]["value"];
+        // $senha = $xml->appSettings->xpath('add[@key="dbPwd"]')[0]["value"];
+
+        // $connection = new PDO( "sqlsrv:Server={$servidor}\\{$instancia};Database={$database}", $usuario, $senha, array( PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
 
         $host = "localhost";
         $user = "root";
         $pass = "";
         $banco = "CONSULTOU";
         $charsetdb = "utf8";
-        $conexao = new mysqli($host, $user, $pass, $banco) or die("A conexão com o Banco de dados Falhou, tente novamente!" . mysqli_connect_error());
-        $conexao->set_charset($charsetdb);
-        return $conexao;
+        $connection = new mysqli($host, $user, $pass, $banco) or die("A conexão com o Banco de dados Falhou, tente novamente!" . mysqli_connect_error());
+        $connection->set_charset($charsetdb);
+
+        return $connection;
     }
 
-    //fecha conexao
-    public function fechaconexao($conexao) {
-        $conexao->close();
+    //fecha connection
+    public function CloseConnection($connection) {
+        $connection = null;
     }
 
-    //Escapar dados através do real escape
-    public function escapar($dados) {
-        $conexao = $this->abreconexao();
-        if (!is_array($dados)) {
-            $dados = $conexao->real_escape_string($dados);
-        } else {
-            $arr = $dados;
-            foreach ($arr as $key => $value) {
-                $key = $conexao->real_escape_string($key);
-                $value = $conexao->real_escape_string($value);
+    //Executar query sem abrir conexão e nem fechar
+    public function Run_query($connection, $query, $bindParams = null, $insertid = false) {
+        $stmt = $connection->prepare($query);
 
-                $dados[$key] = $value;
-            }
-        }
-        $this->fechaconexao($conexao);
-        return $dados;
-    }
+        $stmt->execute($bindParams);
 
-    //Executar query
-    public function executar_query($query, $insertid = false) {
-        $conexao = $this->abreconexao();
-        //$result		= @mysqli_query($conexao, $query) or die(mysqli_error($conexao));
-        // Prepara uma consulta SQL
-        if ($result = $conexao->query($query)) {
-            // Atribui valores às variáveis da consulta
-            //$sql->bind_param('s', $data); // Coloca o valor de $data no lugar da primeira interrogação (?)
-            // Executa a consulta
-            //$result->execute();
-            if ($insertid) {
-                $result = $conexao->insert_id;
-            }
-            // Fecha a consulta
-            //$result->close();
-        }
-        $this->fechaconexao($conexao);
-        return $result;
+        return $stmt;
     }
 
     //gravar registros no banco de dados
-    public function Inserir($table, array $data, $insertid = false) {
+    public function Insert($connection, $table, array $data, $insertid = false) {
         $table = $table;
-        $data = $this->escapar($data);
 
         $fields = implode(', ', array_keys($data));
+        $bindParams = array();
         //$values = "'" . implode("', '", $data) . "'";
         foreach ($data as $value) {
             if ($contador == 0) {
@@ -72,95 +58,115 @@ class DAO {
             } else {
                 $separador = ", ";
             }
-            if (substr_count(strtoupper($value), "SELECT") > 0 ||
-                    substr_count(strtoupper($value), "TO_DATE") > 0 ||
-                    substr_count(strtoupper($value), "DATETIME") > 0 ||
-                    substr_count(strtoupper($value), "GETDATE") > 0 ||
-                    substr_count(strtoupper($value), "SYSDATE") > 0) {
-                $values = $values . $separador . $value . "";
-            } else {
-                $values = $values . $separador . "'" . $value . "'";
-            }
+            $bindParams[':FIELD' . $contador] = $value;
+
+            $values = $values . $separador . ":FIELD" . $contador . "";
+            
             $contador++;
         }
 
         $query = "INSERT INTO {$table} ( {$fields} ) VALUES ( {$values} )";
-
-        return $this->executar_query($query, $insertid);
-    }
-
-    //gravar registros no banco de dados mas exibir antes
-    public function InserirTeste($table, array $data, $insertid = false) {
-        $table = $table;
-        $data = $this->escapar($data);
-
-        $fields = implode(', ', array_keys($data));
-        $values = "'" . implode("', '", $data) . "'";
-
-        $query = "INSERT INTO {$table} ( {$fields} ) VALUES ( {$values} )";
-        echo $query;
-        return $this->executar_query($query, $insertid);
+        
+        return $this->Run_query($connection, $query, $bindParams);//$insertid);
     }
 
     // ler registros no banco de dados
-    public function consultar($table, $fields = "*", $params = null) {
+    public function Consult($connection, $table, $fields, $params, $bindParams = null){
         $table = $table;
         $params = ($params) ? " {$params}" : null;
-        $query = "SELECT SQL_CACHE {$fields} FROM {$table} {$params}";
-        $result = $this->executar_query($query);
-        $count = $result->num_rows;
-        if (($result) && $count > 0) {
-            while ($res = $result->fetch_array(MYSQLI_ASSOC)) {
-                $data[] = $res;
-            }
-            //$data['countrow'] = $count;
-            return $data;
-        } else {
+        $query = "SELECT {$fields} FROM {$table} {$params}";
+        $result = $this->Run_query($connection, $query, $bindParams);
+        $result = $result->fetchAll(PDO::FETCH_ASSOC);
+
+        if(!empty($result)){
+            return $result;
+        } else{
             return false;
         }
-        $result->close();
     }
-    // ler registros no banco de dados
-    public function consultarTeste($table, $fields = "*", $params = null) {
-        $table = $table;
-        $params = ($params) ? " {$params}" : null;
-        $query = "SELECT SQL_CACHE {$fields} FROM {$table} {$params}";
-        echo $query;
-        $result = $this->executar_query($query);
-        $count = $result->num_rows;
-        if (($result) && $count > 0) {
-            while ($res = $result->fetch_array(MYSQLI_ASSOC)) {
-                $data[] = $res;
-            }
-            //$data['countrow'] = $count;
-            return $data;
-        } else {
-            return false;
-        }
-        $result->close();
-    }
+
     // alterar registros na tabela
-    public function atualizar($table, array $data, $where = null, $insertid = false) {
+    public function Alter($connection, $table, array $data, $where = null, $bindParams = null, $insertid = false) {
         $table = $table;
         $where = ($where) ? " WHERE {$where}" : null;
+        $contador = 0;
+        $bindParamsInter = array();
 
         foreach ($data as $key => $value) {
-            $fields[] = "{$key} = '{$value}'";
+            $fields[] = "{$key} = :FIELD" . $contador ;
+            $bindParamsInter[':FIELD' . $contador] = $value;
+            $contador++;
         }
         $fields = implode(', ', $fields);
         $query = "UPDATE {$table} SET {$fields}{$where}";
 
-        return $this->executar_query($query, $insertid);
+        foreach ($bindParams as $key => $bindp) {
+            $bindParamsInter[$key] = $bindp;
+        }
+
+        return $this->Run_query($connection, $query, $bindParamsInter,  $insertid);
     }
 
     //deletar registros da tabela
-    public function deletar($table, $where = null) {
+    public function Delete($connection, $table, $where = null, $bindParams = null) {
         $table = $table;
         $where = ($where) ? " WHERE {$where}" : null;
 
         $query = "DELETE FROM {$table}{$where}";
 
-        return $this->executar_query($query);
+        return $this->Run_query($connection, $query, $bindParams);
+    }
+
+    // pega array de fields e monsta corretamente
+    public function mountFields($fields){
+        if(count($fields) == 1){
+            $finalFields = $fields;
+        }else{
+            foreach($fields as $field){
+                if ($contador == 0) {
+                    $separador = " ";
+                } else {
+                    $separador = ", ";
+                }
+    
+                $finalFields = $finalFields .  $separador . $field;
+                
+                $contador++;
+            }
+        }
+        
+        return $finalFields;
+    }
+
+    // monta o parametro e o bindParams para select com IN
+    public function MountInParams($arr, $fieldSearch, $keyArray = null, $returnJustIn = null){
+
+        foreach ($arr as $value) {
+            if ($cont == 0) {
+                $separator = " ";
+            } else {
+                $separator = ", ";
+            }
+            if($keyArray != null){
+                $bindParams[':FIELD' . $cont] = $value[$keyArray];
+            } else{
+                $bindParams[':FIELD' . $cont] = $value;
+            }
+
+            $values = $values . $separator . ":FIELD" . $cont . "";
+            
+            $cont++;
+        }
+
+        if($returnJustIn == null){
+            $params = "WHERE " . $fieldSearch . " IN (" . $values . ")";
+        } else{
+            $params = " " . $fieldSearch . " IN (" . $values . ")";
+        }
+
+        return [$params, $bindParams];
+
     }
 
 }
+    
