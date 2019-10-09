@@ -2,9 +2,9 @@
 
 class DAO {
 
-    //abrimos a conexao através de uma função
+    //abrimos a connection através de uma função
     public function OpenConnection() {
-        //definimos os parametros da conexao - Servidor Local
+        //definimos os parametros da connection - Servidor Local
         // $xml =  simplexml_load_file("../../web.config"); //or die("Error: Cannot create object"); 
         // if(!$xml){
         //     $xml =  simplexml_load_file("../../../web.config");
@@ -18,27 +18,27 @@ class DAO {
         // $usuario = $xml->appSettings->xpath('add[@key="dbUser"]')[0]["value"];
         // $senha = $xml->appSettings->xpath('add[@key="dbPwd"]')[0]["value"];
 
-        // $conexao = new PDO( "sqlsrv:Server={$servidor}\\{$instancia};Database={$database}", $usuario, $senha, array( PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
+        // $connection = new PDO( "sqlsrv:Server={$servidor}\\{$instancia};Database={$database}", $usuario, $senha, array( PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
 
         $host = "localhost";
         $user = "root";
         $pass = "";
         $banco = "CONSULTOU";
         $charsetdb = "utf8";
-        $conexao = new mysqli($host, $user, $pass, $banco) or die("A conexão com o Banco de dados Falhou, tente novamente!" . mysqli_connect_error());
-        $conexao->set_charset($charsetdb);
+        $connection = new mysqli($host, $user, $pass, $banco) or die("A conexão com o Banco de dados Falhou, tente novamente!" . mysqli_connect_error());
+        $connection->set_charset($charsetdb);
 
-        return $conexao;
+        return $connection;
     }
 
-    //fecha conexao
-    public function CloseConnection($conexao) {
-        $conexao = null;
+    //fecha connection
+    public function CloseConnection($connection) {
+        $connection = null;
     }
 
     //Executar query sem abrir conexão e nem fechar
-    public function Run_query($conexao, $query, $bindParams = null, $insertid = false) {
-        $stmt = $conexao->prepare($query);
+    public function Run_query($connection, $query, $bindParams = null, $insertid = false) {
+        $stmt = $connection->prepare($query);
 
         $stmt->execute($bindParams);
 
@@ -46,7 +46,7 @@ class DAO {
     }
 
     //gravar registros no banco de dados
-    public function Insert($conexao, $table, array $data, $insertid = false) {
+    public function Insert($connection, $table, array $data, $insertid = false) {
         $table = $table;
 
         $fields = implode(', ', array_keys($data));
@@ -67,15 +67,15 @@ class DAO {
 
         $query = "INSERT INTO {$table} ( {$fields} ) VALUES ( {$values} )";
         
-        return $this->Run_query($conexao, $query, $bindParams);//$insertid);
+        return $this->Run_query($connection, $query, $bindParams);//$insertid);
     }
 
     // ler registros no banco de dados
-    public function Consult($conexao, $table, $fields, $params, $bindParams = null){
+    public function Consult($connection, $table, $fields, $params, $bindParams = null){
         $table = $table;
         $params = ($params) ? " {$params}" : null;
         $query = "SELECT {$fields} FROM {$table} {$params}";
-        $result = $this->Run_query($conexao, $query, $bindParams);
+        $result = $this->Run_query($connection, $query, $bindParams);
         $result = $result->fetchAll(PDO::FETCH_ASSOC);
 
         if(!empty($result)){
@@ -86,7 +86,7 @@ class DAO {
     }
 
     // alterar registros na tabela
-    public function Alter($conexao, $table, array $data, $where = null, $bindParams = null, $insertid = false) {
+    public function Alter($connection, $table, array $data, $where = null, $bindParams = null, $insertid = false) {
         $table = $table;
         $where = ($where) ? " WHERE {$where}" : null;
         $contador = 0;
@@ -104,17 +104,17 @@ class DAO {
             $bindParamsInter[$key] = $bindp;
         }
 
-        return $this->Run_query($conexao, $query, $bindParamsInter,  $insertid);
+        return $this->Run_query($connection, $query, $bindParamsInter,  $insertid);
     }
 
     //deletar registros da tabela
-    public function Delete($conexao, $table, $where = null, $bindParams = null) {
+    public function Delete($connection, $table, $where = null, $bindParams = null) {
         $table = $table;
         $where = ($where) ? " WHERE {$where}" : null;
 
         $query = "DELETE FROM {$table}{$where}";
 
-        return $this->Run_query($conexao, $query, $bindParams);
+        return $this->Run_query($connection, $query, $bindParams);
     }
 
     // pega array de fields e monsta corretamente
