@@ -25,9 +25,9 @@ class DAO {
         $pass = "";
         $banco = "CONSULTOU";
         $charsetdb = "utf8";
-        $connection = new mysqli($host, $user, $pass, $banco) or die("A conexão com o Banco de dados Falhou, tente novamente!" . mysqli_connect_error());
-        $connection->set_charset($charsetdb);
-
+        //$connection = new mysqli($host, $user, $pass, $banco) or die("A conexão com o Banco de dados Falhou, tente novamente!" . mysqli_connect_error());
+        //$connection->set_charset($charsetdb);
+        $connection = new PDO('mysql:host='.$host.';dbname='.$banco, $user, $pass);
         return $connection;
     }
 

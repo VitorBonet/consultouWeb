@@ -12,7 +12,7 @@ class User {
     private $accessNumber;
     
     function __construct() {
-        define("USER_TABLENAME", "WEG_USER_USE");
+        define("USER_TABLENAME", "USER_USE_CNS");
         define("USER_ID", "USE_ID");
         define("USER_NAME", "USE_NAME");
         define("USER_EMAIL", "USE_EMAIL");
