@@ -18,19 +18,22 @@ $connection = $ObjDAO->OpenConnection();
 try{
 
     $user = $_REQUEST['user'];
-    $password = md5($_REQUEST['password']);
-    
+    //$password = md5($_REQUEST['password']);
+    $password = $_REQUEST['password'];
+
     $fields = USER_ID;
     $params = " WHERE " . USER_EMAIL . " = :USER_EMAIL AND " . USER_PASSWORD . " = :USER_PASSWORD";
-    $bindParams = array(':USER_EMAIL' => $user, ':USER_PASSWORD' => $password)
+    $bindParams = array(':USER_EMAIL' => $user, ':USER_PASSWORD' => $password);
     $consult = $ObjDAO->Consult($connection, USER_TABLENAME, $fields, $params, $bindParams);
 
     if(!$consult){
-        $mensagem = 'invalid';
+        $mensage = 'invalid';
         echo json_encode(array('response' => $mensage));
         $ObjDAO->CloseConnection($connection);
         exit;
     }
+
+    $_SESSION['user'] = $user;
 
     $mensage = 'success';
     echo json_encode(array('response' => $mensage));

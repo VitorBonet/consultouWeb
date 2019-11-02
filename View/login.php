@@ -1,20 +1,3 @@
-<?php
-include_once '../Model/DAO.Class.php';
-include_once '../Model/User.Class.php';
-
-$ObjDAO  = new DAO();
-$ObjUser  = new User();
-
-$conn = $ObjDAO->OpenConnection();
-$table = USER_TABLENAME;
-$fields = "*";
-$params = USER_ID . " = :USER_ID";
-$bindParams = array(':USER_ID' => '1');
-$consult = $ObjDAO->Consult($conn, $table, $fields, $params, $bindParams);
-var_dump($consult);
-$ObjDAO->CloseConnection($conn);
-
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head runat="server">
@@ -105,17 +88,17 @@ $ObjDAO->CloseConnection($conn);
     $('#submitAvancar').click(function () {
         $.ajax({
             method: "POST",
-            url: "../Controller/userController",
+            url: "../Controller/authenticController",
             data: {
                 user: $('#user').val(),
                 password: $('#password').val(),
             },
             success: function (msg) {
                 msg = JSON.parse(msg);
-                if (msg.resposta === 'success') {
+                if (msg.response === 'success') {
                     loginsucessfully();
                 } else {
-                    switch(msg.resposta){
+                    switch(msg.response){
                         case 'false':
                             toastr.error("email ou senha invalido","erro!"); 
                             break

@@ -39,8 +39,7 @@ class DAO {
     //Executar query sem abrir conexão e nem fechar
     public function Run_query($connection, $query, $bindParams = null, $insertid = false) {
         $stmt = $connection->prepare($query);
-        $stmt->bind_param(':USER_ID', '1');
-        $stmt->execute();
+        $stmt->execute($bindParams);
 
         return $stmt;
     
