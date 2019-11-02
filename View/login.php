@@ -1,17 +1,14 @@
 <?php
-    include_once '../Model/DAO.Class.php';
-    include_once '../Model/User.Class.php';
+include_once '../Model/DAO.Class.php';
+include_once '../Model/User.Class.php';
 
-    
-$ObjDAO = new DAO();
-$ObjUser = new User();
-
-//phpinfo();
+$ObjDAO  = new DAO();
+$ObjUser  = new User();
 
 $conn = $ObjDAO->OpenConnection();
 $table = USER_TABLENAME;
 $fields = "*";
-$params = USER_ID ." = :USER_ID";
+$params = USER_ID . " = :USER_ID";
 $bindParams = array(':USER_ID' => '1');
 $consult = $ObjDAO->Consult($conn, $table, $fields, $params, $bindParams);
 var_dump($consult);
