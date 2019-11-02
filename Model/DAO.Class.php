@@ -39,12 +39,12 @@ class DAO {
     //Executar query sem abrir conexão e nem fechar
     public function Run_query($connection, $query, $bindParams = null, $insertid = false) {
         $stmt = $connection->prepare($query);
-
-        $stmt->execute($bindParams);
+        $stmt->bind_param(':USER_ID', '1');
+        $stmt->execute();
 
         return $stmt;
+    
     }
-
     //gravar registros no banco de dados
     public function Insert($connection, $table, array $data, $insertid = false) {
         $table = $table;
@@ -73,11 +73,10 @@ class DAO {
     // ler registros no banco de dados
     public function Consult($connection, $table, $fields, $params, $bindParams = null){
         $table = $table;
-        $params = ($params) ? " {$params}" : null;
+        $params = ($params) ? " {$params}" : "";
         $query = "SELECT {$fields} FROM {$table} {$params}";
         $result = $this->Run_query($connection, $query, $bindParams);
         $result = $result->fetchAll(PDO::FETCH_ASSOC);
-
         if(!empty($result)){
             return $result;
         } else{
