@@ -1,3 +1,23 @@
+<?php
+    include_once '../Model/DAO.Class.php';
+    include_once '../Model/User.Class.php';
+
+    
+$ObjDAO = new DAO();
+$ObjUser = new User();
+
+//phpinfo();
+
+$conn = $ObjDAO->OpenConnection();
+$table = USER_TABLENAME;
+$fields = "*";
+$params = USER_ID ." = :USER_ID";
+$bindParams = array(':USER_ID' => '1');
+$consult = $ObjDAO->Consult($conn, $table, $fields, $params, $bindParams);
+var_dump($consult);
+$ObjDAO->CloseConnection($conn);
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head runat="server">
