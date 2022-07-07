@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "rxjs": "6.1.0",
-    "moment": "2.22.2",
+    "moment": "2.29.4",
     "core-js": "2.5.5",
     "zone.js": "0.8.29",
     "@types/node": "6.0.117",
